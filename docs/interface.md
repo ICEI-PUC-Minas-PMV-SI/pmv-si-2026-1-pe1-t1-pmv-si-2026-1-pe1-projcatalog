@@ -26,7 +26,15 @@ São protótipos usados em design de interface para sugerir a estrutura de um si
 A tela inicial apresenta um menu lateral com as principais seções do portal, enquanto a navigation bar, ao topo, apresenta informações de envio de imagens ou navegação pela galeria de fotos. A área central apresenta a galeria de fotos na forma de uma grade. Nesta tela, são apresentados os seguintes requisitos
 
 ![Exemplo de Wireframe](img/wireframe-example.png)
-![Exemplo de Wireframe](img/wireframe-example.png)
+![Exemplo de Wireframe](img/Registro.png)
+![Exemplo de Wireframe](img/login.png)
+![Exemplo de Wireframe](img/index.png)
+![Exemplo de Wireframe](img/Area_empresario-cadastro%20loja.png)
+![Exemplo de Wireframe](img/adicionando.png)
+![Exemplo de Wireframe](img/serviço.png)
+![Exemplo de Wireframe](img/Area_empresario.png)
+![Exemplo de Wireframe](img/Info_Produtos.png)
+![Exemplo de Wireframe](img/Favoritos.png)
  
 > **Links Úteis**:
 > - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
