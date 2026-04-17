@@ -24,55 +24,35 @@ Lembre-se que você deve ser enumerar e descrever precisamente e personalizada t
 
 ## Histórias de Usuários
 
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
-
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
+| Eu como... | Quero/Desejo... | Para... |
+|------------|----------------|---------|
+| Consumidora (Mariana) | Localizar prestadores de serviço próximos à minha residência, como eletricistas, encanadores e diaristas | Economizar tempo e encontrar opções confiáveis na região |
+| Consumidora (Carol) | Consultar avaliações de outros usuários sobre prestadores de serviços como salões de beleza, mecânicos e serviços de manutenção | Tomar decisões mais seguras antes de contratar |
+| Microempreendedor (João), eletricista autônomo | Gerenciar meu catálogo de serviços, como instalações elétricas e manutenção residencial | Manter as ofertas atualizadas e atrativas para os clientes |
+| Microempreendedor (Rodrigo) | Disponibilizar um meio de contato direto para os clientes | Facilitar a comunicação e aumentar as chances de fechar vendas |
 
 ## Requisitos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
-
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade | 
-|------|-----------------------------------------|----| 
-|RF-001| A aplicação deve permitir que o usuário gerencie suas tarefas | ALTA |  
-|RF-002| A aplicação deve permitir a emissão de um relatório de tarefas realizadas no mês   | MÉDIA | 
-
+| ID | Descrição | Prioridade |
+|----|-----------|------------|
+| RF-01 | O sistema deve filtrar e exibir estabelecimentos com base na geolocalização do usuário | Alta |
+| RF-02 | O sistema deve permitir a visualização detalhada do catálogo de serviços do anunciante, incluindo descrição, preço e imagens | Alta |
+| RF-03 | O sistema deve exibir avaliações e comentários de outros usuários sobre os prestadores de serviço | Média |
+| RF-04 | O sistema deve disponibilizar botões de contato direto, como WhatsApp e telefone, no perfil do anunciante | Alta |
+| RF-05 | O sistema deve permitir que o empreendedor cadastre, edite e exclua seus serviços por meio de uma interface de gestão | Alta |
 
 ### Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| A aplicação deve ser responsiva | MÉDIA | 
-|RNF-002| A aplicação deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+| ID | Descrição | Prioridade |
+|----|-----------|------------|
+| RNF-01 | A interface deve seguir padrões de design responsivo para garantir compatibilidade em diferentes dispositivos e tamanhos de tela | Alta |
+| RNF-02 | O sistema deve processar requisições de busca com tempo de resposta inferior a 2 segundos | Alta |
+| RNF-03 | Os dados sensíveis dos usuários devem ser protegidos por criptografia e autenticação segura, conforme normas de proteção de dados | Alta |
+| RNF-04 | A interface de gestão do empreendedor deve ser intuitiva, reduzindo a curva de aprendizagem para usuários com baixo domínio tecnológico | Alta |
+| RNF-05 | O sistema deve garantir a integridade dos dados de avaliações, prevenindo manipulação indevida | Média |
+| RNF-06 | A plataforma deve utilizar geolocalização com precisão mínima de 50 metros para exibir resultados relevantes | Alta |
 
 ## Restrições
 
