@@ -1,54 +1,25 @@
 # Introdução
 
-Imagine que você deseja apresentar este projeto para investidores que deverão decidir se investem ou não no desenvolvimento da sua ferramenta.
+Com a digitalização das relações de consumo, a presença online tornou-se um requisito fundamental para a viabilidade de negócios. Contudo, observa-se que uma parcela significativa de microempreendedores e trabalhadores autônomos do setor terciário enfrenta barreiras técnicas e financeiras para estabelecer uma vitrine digital eficiente. Essa lacuna resulta em baixa visibilidade perante o mercado local e dificulta o acesso de consumidores a serviços de proximidade.
 
-A **Introdução** consiste das etapas: *Contextualização -- Definição do problema -- Definição dos Objetivos -- Justificativa*, e tem como função situar o seu trabalho dentro de um contexto de mercado e mostrar a importância da sua proposta para resolver a dor de um usuário.
-
-A Contextualização deve situar sem projeto em um determinado contexto de mercado, a fim de fornecer informações adicionais que possam ajudar a entender melhor o assunto que você irá abordar. Serve também para definir a relevância do seu assunto, uma vez que mostra o tamanho do mercado em que se está inserido. Ela pode envolver a análise de vários aspectos, como o ambiente histórico, cultural, político e social em que o problema a ser atacado surgiu.
-
-Escreva de 2 a 3 parágrafos para contetualizar o seu projeto.
+Nesse contexto, este projeto propõe o desenvolvimento de uma aplicação web de catálogo digital. A plataforma visa atuar como um mediador tecnológico, facilitando a conexão entre a oferta de serviços especializados e a demanda de consumidores que buscam praticidade e agilidade. Através de recursos de geolocalização e uma interface simplificada, busca-se promover a inclusão digital e o fortalecimento da economia regional.
 
 ## Problema
 
-Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, **não** é a hora de comentar sobre a solução/aplicação.
-
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+O problema central reside na invisibilidade digital de pequenos negócios locais. Muitos empreendedores do setor terciário não possuem plataformas próprias de divulgação, dependendo exclusivamente de meios físicos ou redes sociais genéricas. Simultaneamente, os consumidores enfrentam dificuldades para localizar prestadores de serviço específicos nas suas imediações de forma rápida e validada, o que gera uma ineficiência na economia local.
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
-
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Desenvolver uma aplicação web de catálogo digital que conecte consumidores a microempreendedores do setor terciário por meio de geolocalização e interface de curadoria visual.
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+A justificativa deste projeto fundamenta-se na necessidade de democratizar o acesso ao marketing digital para microempreendedores, que muitas vezes enfrentam barreiras financeiras e técnicas para divulgar seus serviços em plataformas tradicionais. Ao oferecer uma ferramenta acessível, de baixo custo e alta usabilidade, a proposta contribui para ampliar a visibilidade desses profissionais e fortalecer sua competitividade no mercado local.
 
-Lembre-se de pesquisar e utilizar números que justifiquem por que é importante que tal problema seja resolvido ou que mostrem o impacto do problema na vida das pessoas.
-
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Para o consumidor, a solução se justifica pela otimização do tempo na busca por serviços, além de facilitar a descoberta de prestadores próximos, confiáveis e bem avaliados, que muitas vezes permanecem invisíveis nos meios digitais convencionais.
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
+O público-alvo da plataforma é composto por microempreendedores individuais (MEIs) e profissionais autônomos que atuam no setor terciário, especialmente nas áreas de serviços e comércio local, como manutenção residencial, estética, alimentação e serviços gerais.
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Também engloba consumidores residentes, principalmente em centros urbanos, que utilizam dispositivos móveis para buscar praticidade na contratação de serviços e desejam encontrar opções próximas, confiáveis e bem avaliadas.
