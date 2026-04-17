@@ -11,7 +11,6 @@ O projeto consiste no desenvolvimento de uma plataforma digital voltada para a d
 ## Integrantes
 
 * Diego Alves
-* Joyce Franco
 * Osmar Coelho
 * Lucas Corrêa
 * Davi do Amaral
