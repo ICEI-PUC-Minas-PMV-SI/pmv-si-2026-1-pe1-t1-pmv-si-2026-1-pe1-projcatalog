@@ -1,19 +1,9 @@
 # Referências
 
-Inclua todas as referências (livros, artigos, sites, etc) utilizadas no desenvolvimento do trabalho.
+COSTA, Marco Rodrigo. *Material de apoio e orientações de projeto: projeto aplicações web*. Belo Horizonte: PUC Minas, 2026.
 
-> **Links Úteis**:
-> - [Formato ABNT](https://www.normastecnicas.com/referencias/)
+SERASA EXPERIAN. *Conquistar clientes é o maior desafio para PMEs no início da jornada*. Disponível em: <https://www.serasaexperian.com.br>. Acesso em: 19 abr. 2026.
 
-Exemplos de referências bibliográficas:
+INSTITUTO LOCOMOTIVA; ITAÚ EMPRESAS. *Pequenas empresas sentem mais os desafios*. Disponível em: <https://www.itau.com.br>. Acesso em: 19 abr. 2026.
 
-**[1]** - _ELMASRI, Ramez; NAVATHE, Sham. **Sistemas de banco de dados**. 7. ed. São Paulo: Pearson, c2019. E-book. ISBN 9788543025001._
-
-**[2]** - _COPPIN, Ben. **Inteligência artificial**. Rio de Janeiro, RJ: LTC, c2010. E-book. ISBN 978-85-216-2936-8._
-
-**[3]** - _CORMEN, Thomas H. et al. **Algoritmos: teoria e prática**. Rio de Janeiro, RJ: Elsevier, Campus, c2012. xvi, 926 p. ISBN 9788535236996._
-
-**[4]** - _SUTHERLAND, Jeffrey Victor. **Scrum: a arte de fazer o dobro do trabalho na metade do tempo**. 2. ed. rev. São Paulo, SP: Leya, 2016. 236, [4] p. ISBN 9788544104514._
-
-**[5]** - _RUSSELL, Stuart J.; NORVIG, Peter. **Inteligência artificial**. Rio de Janeiro: Elsevier, c2013. xxi, 988 p. ISBN 9788535237016._
-
+REVISTA FT. *A importância do marketing nas pequenas empresas*. ISSN 1678-0817. Disponível em: <https://revistaft.com.br>. Acesso em: 19 abr. 2026.
