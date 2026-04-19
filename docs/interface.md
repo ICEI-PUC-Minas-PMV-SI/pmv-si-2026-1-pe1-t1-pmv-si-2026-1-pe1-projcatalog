@@ -7,7 +7,6 @@
 
 ## Wireframes
 
-![Exemplo de Wireframe](img/wireframe-example.png)
 ![Exemplo de Wireframe](img/Registro.png)
 ![Exemplo de Wireframe](img/login.png)
 ![Exemplo de Wireframe](img/index.png)
