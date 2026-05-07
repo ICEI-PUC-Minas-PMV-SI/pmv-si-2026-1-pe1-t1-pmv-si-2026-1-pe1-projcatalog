@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Favoritos</title>
+
+  <link rel="stylesheet" href="/src/styles/styles.css" />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo-container">
+      <div class="logo">CATALOG<span>.</span></div>
+    </div>
+    
+    <div class="link-container">
+      <nav class="menu">
+        <a href="#" class="active">Início</a>
+        <a href="#">Categorias</a>
+        <a href="#">Favoritos</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container">
+
+    <!-- TOPO -->
+    <section class="favorites-header">
+      <div>
+        <h1>Meus Favoritos</h1>
+        <p>6 estabelecimentos salvos</p>
+      </div>
+
+      <button class="favorite-icon">
+        <i class="fa-regular fa-heart"></i>
+      </button>
+    </section>
+
+    <!-- GRID -->
+    <section class="cards-grid">
+
+      <!-- CARD -->
+      <article class="card">
+        <div class="card-image">
+
+          <span class="tag">CAFETERIA</span>
+
+          <button class="remove-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+
+          <div class="placeholder">
+            <i class="fa-regular fa-image"></i>
+            <span>IMAGEM</span>
+          </div>
+        </div>
+
+        <div class="card-content">
+          <h3>Café Central</h3>
+
+          <div class="rating">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+
+            <span>4.8 (124)</span>
+          </div>
+
+          <div class="address">
+            <i class="fa-solid fa-location-dot"></i>
+            Rua das Flores, 123
+          </div>
+
+          <div class="card-footer">
+            <span>0.5 km</span>
+
+            <button>VER DETALHES</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD -->
+      <article class="card">
+        <div class="card-image">
+
+          <span class="tag">PADARIA</span>
+
+          <button class="remove-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+
+          <div class="placeholder">
+            <i class="fa-regular fa-image"></i>
+            <span>IMAGEM</span>
+          </div>
+        </div>
+
+        <div class="card-content">
+          <h3>Padaria Artesanal</h3>
+
+          <div class="rating">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+
+            <span>4.6 (89)</span>
+          </div>
+
+          <div class="address">
+            <i class="fa-solid fa-location-dot"></i>
+            Av. Principal, 456
+          </div>
+
+          <div class="card-footer">
+            <span>1.2 km</span>
+
+            <button>VER DETALHES</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD -->
+      <article class="card">
+        <div class="card-image">
+
+          <span class="tag">RESTAURANTE</span>
+
+          <button class="remove-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+
+          <div class="placeholder">
+            <i class="fa-regular fa-image"></i>
+            <span>IMAGEM</span>
+          </div>
+        </div>
+
+        <div class="card-content">
+          <h3>Restaurante Sabor</h3>
+
+          <div class="rating">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+
+            <span>4.7 (156)</span>
+          </div>
+
+          <div class="address">
+            <i class="fa-solid fa-location-dot"></i>
+            Praça Central, 789
+          </div>
+
+          <div class="card-footer">
+            <span>2.1 km</span>
+
+            <button>VER DETALHES</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD -->
+      <article class="card">
+        <div class="card-image">
+
+          <span class="tag">MERCADO</span>
+
+          <button class="remove-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+
+          <div class="placeholder">
+            <i class="fa-regular fa-image"></i>
+            <span>IMAGEM</span>
+          </div>
+        </div>
+
+        <div class="card-content">
+          <h3>Empório Gourmet</h3>
+
+          <div class="rating">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+
+            <span>4.5 (97)</span>
+          </div>
+
+          <div class="address">
+            <i class="fa-solid fa-location-dot"></i>
+            Rua do Comércio, 321
+          </div>
+
+          <div class="card-footer">
+            <span>1.8 km</span>
+
+            <button>VER DETALHES</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD -->
+      <article class="card">
+        <div class="card-image">
+
+          <span class="tag">RESTAURANTE</span>
+
+          <button class="remove-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+
+          <div class="placeholder">
+            <i class="fa-regular fa-image"></i>
+            <span>IMAGEM</span>
+          </div>
+        </div>
+
+        <div class="card-content">
+          <h3>Bistrô da Esquina</h3>
+
+          <div class="rating">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+
+            <span>4.9 (203)</span>
+          </div>
+
+          <div class="address">
+            <i class="fa-solid fa-location-dot"></i>
+            Esquina da Alegria, 55
+          </div>
+
+          <div class="card-footer">
+            <span>0.8 km</span>
+
+            <button>VER DETALHES</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD -->
+      <article class="card">
+        <div class="card-image">
+
+          <span class="tag">PADARIA</span>
+
+          <button class="remove-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+
+          <div class="placeholder">
+            <i class="fa-regular fa-image"></i>
+            <span>IMAGEM</span>
+          </div>
+        </div>
+
+        <div class="card-content">
+          <h3>Confeitaria Doce Mel</h3>
+
+          <div class="rating">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+
+            <span>4.4 (82)</span>
+          </div>
+
+          <div class="address">
+            <i class="fa-solid fa-location-dot"></i>
+            Rua Doce, 111
+          </div>
+
+          <div class="card-footer">
+            <span>3.0 km</span>
+
+            <button>VER DETALHES</button>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="footer-grid">
+
+      <div>
+        <h2>CATALOG</h2>
+        <p>
+          Conectando você aos melhores negócios locais.
+        </p>
+      </div>
+
+      <div>
+        <h4>Explorar</h4>
+
+        <ul>
+          <li>Todas as categorias</li>
+          <li>Buscar</li>
+          <li>Favoritos</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Para Empresas</h4>
+
+        <ul>
+          <li>Cadastrar negócio</li>
+          <li>Painel</li>
+          <li>Suporte</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Sobre</h4>
+
+        <ul>
+          <li>Quem somos</li>
+          <li>Contato</li>
+          <li>Termos de uso</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-copy">
+      © 2026 CATALOG. Todos os direitos reservados.
+    </div>
+
+  </footer>
+
+</body>
+</html>
