@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catalog - Encontre Serviços Locais</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1>Catalog</h1>
+<div class="busca-container">
+<input type="text" id="busca" placeholder="O que você precisa hoje?">
+<button onclick="buscarServicos()">Buscar</button>
+</div>
+</header>
+
+<main id="vitrine-servicos">
+<article class="card-servico">
+<img src="marcenaria.jpg" alt="Foto de serviço de marcenaria">
+<div class="card-info">
+<h2>João Marceneiro</h2>
+<p>Móveis planejados e pequenos reparos residenciais.</p>
+<span class="distancia">A 1.2km de você</span>
+<div class="card-acoes">
+<a href="https://wa.me/seunumeroaqui" class="btn-contato">WhatsApp</a>
+<button class="btn-favoritar" onclick="favoritar(1)">⭐</button>
+</div>
+</div>
+</article>
+</main>
+
+<footer>
+<p>&copy; 2026 Catalog - PUC Minas</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
