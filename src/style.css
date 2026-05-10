@@ -1,0 +1,48 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #121212; /* Fundo Escuro */
+    color: #ffffff;
+}
+
+header {
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #007bff; /* Detalhe Azul */
+}
+
+#vitrine-servicos {
+    display: flex; /* Flexbox para alinhar os cards */
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card-servico {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card-servico:hover {
+    transform: scale(1.05); /* Efeito ao passar o mouse */
+}
+
+.btn-contato {
+    display: inline-block;
+    background-color: #25d366; /* Verde WhatsApp */
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
