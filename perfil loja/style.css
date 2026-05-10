@@ -1,0 +1,340 @@
+/* ===========================
+   CATALOG. — minha-loja.css
+   Página: Minha Loja
+   =========================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dark:        #1a2035;
+  --white:       #ffffff;
+  --gray-bg:     #f4f5f7;
+  --gray-border: #d8dce6;
+  --gray-label:  #6b7492;
+  --footer-bg:   #1e2332;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background: var(--gray-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== TOPBAR ===== */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-border);
+  padding: 0 32px;
+  height: 50px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.topbar-logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  color: var(--dark);
+}
+
+.topbar-nav {
+  display: flex;
+  gap: 36px;
+}
+
+.nav-link {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--gray-label);
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.nav-link.active {
+  color: var(--dark);
+  font-weight: 700;
+  border-bottom-color: var(--dark);
+}
+
+.nav-link:hover:not(.active) { color: var(--dark); }
+
+/* ===== LAYOUT ===== */
+.layout {
+  display: flex;
+  flex: 1;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 230px;
+  min-height: calc(100vh - 50px);
+  background: var(--white);
+  border-right: 2px solid var(--gray-border);
+  padding: 28px 0 0;
+  flex-shrink: 0;
+}
+
+.sidebar-brand { padding: 0 24px 20px; }
+
+.sidebar-logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+  color: var(--dark);
+}
+
+.sidebar-sub {
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--gray-label);
+  margin-top: 3px;
+}
+
+.sidebar-divider {
+  border: none;
+  border-top: 1px solid var(--gray-border);
+  margin-bottom: 10px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0 12px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: 4px;
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--gray-label);
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sidebar-link svg { width: 17px; height: 17px; flex-shrink: 0; }
+.sidebar-link:hover { background: var(--gray-bg); color: var(--dark); }
+.sidebar-link.active {
+  background: var(--dark);
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* ===== CONTEÚDO ===== */
+.content {
+  flex: 1;
+  padding: 36px 40px;
+  max-width: 900px;
+}
+
+/* ===== CABEÇALHO ===== */
+.page-header { margin-bottom: 24px; }
+
+.page-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.08em;
+  color: var(--dark);
+}
+
+.page-subtitle {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--gray-label);
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
+.page-divider {
+  border: none;
+  border-top: 2px solid var(--dark);
+}
+
+/* ===== FORM CARD ===== */
+.form-card {
+  background: var(--white);
+  border: 1.5px solid var(--gray-border);
+  border-radius: 4px;
+  padding: 28px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ===== CAMPOS ===== */
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.field-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gray-label);
+}
+
+.field-label svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.field-input {
+  width: 100%;
+  border: 1.5px solid var(--gray-border);
+  border-radius: 3px;
+  padding: 10px 12px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.85rem;
+  color: var(--dark);
+  background: var(--white);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.field-input:focus { border-color: var(--dark); }
+.field-input::placeholder { color: #b0b8cc; }
+
+.field-textarea {
+  width: 100%;
+  border: 1.5px solid var(--gray-border);
+  border-radius: 3px;
+  padding: 10px 12px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.85rem;
+  color: var(--dark);
+  background: var(--white);
+  outline: none;
+  resize: vertical;
+  min-height: 90px;
+  transition: border-color 0.2s;
+}
+
+.field-textarea:focus { border-color: var(--dark); }
+
+/* ===== LINHA COM 2 CAMPOS ===== */
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-row .field-group { flex: 1; }
+
+/* ===== BOTÃO ===== */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 6px;
+}
+
+.btn-salvar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--dark);
+  color: var(--white);
+  border: none;
+  border-radius: 3px;
+  padding: 12px 24px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-salvar svg { width: 15px; height: 15px; }
+.btn-salvar:hover { opacity: 0.85; }
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--footer-bg);
+  padding: 40px 48px 0;
+  margin-top: auto;
+}
+
+.footer-inner {
+  display: flex;
+  gap: 64px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #2e3549;
+}
+
+.footer-brand { flex: 1.2; }
+
+.footer-logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+  color: var(--white);
+}
+
+.footer-tagline {
+  font-size: 0.76rem;
+  color: #8892a8;
+  margin-top: 10px;
+  line-height: 1.7;
+}
+
+.footer-col { display: flex; flex-direction: column; gap: 8px; }
+
+.footer-col h4 {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.footer-col a {
+  font-size: 0.76rem;
+  color: #8892a8;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--white); }
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.7rem;
+  color: #5a6278;
+  padding: 16px 0;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .sidebar { display: none; }
+  .content { padding: 20px 16px; }
+  .topbar-nav { display: none; }
+  .form-row { flex-direction: column; }
+  .footer-inner { flex-direction: column; gap: 24px; }
+}
