@@ -1,0 +1,278 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: #f0f0f0;
+    color: #1a1a1a;
+}
+
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #111;
+}
+
+nav a {
+    margin-left: 24px;
+    text-decoration: none;
+    color: #444;
+    font-size: 0.9rem;
+}
+
+nav a.ativo {
+    color: #111;
+    font-weight: bold;
+    border-bottom: 2px solid #111;
+    padding-bottom: 2px;
+}
+
+
+/* LAYOUT DA PÁGINA */
+.pagina {
+    display: flex;
+    min-height: calc(100vh - 54px);
+}
+
+
+/* SIDEBAR */
+.sidebar {
+    width: 240px;
+    background: white;
+    border-right: 1px solid #ddd;
+    padding: 30px 0;
+}
+
+.sidebar-logo {
+    padding: 0 24px 24px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.sidebar-logo strong {
+    display: block;
+    font-size: 1.1rem;
+    color: #111;
+    margin-bottom: 4px;
+}
+
+.sidebar-logo span {
+    font-size: 0.65rem;
+    color: #888;
+    letter-spacing: 1px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-nav a {
+    text-decoration: none;
+    color: #444;
+    font-size: 0.85rem;
+    padding: 12px 24px;
+}
+
+.sidebar-nav a.ativo {
+    background: #1a2b4a;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* CONTEÚDO PRINCIPAL */
+.conteudo {
+    flex: 1;
+    padding: 40px 48px;
+    background: #f0f0f0;
+}
+
+
+/* TOPO — TÍTULO + BOTÃO LADO A LADO */
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 28px;
+}
+
+.titulo-pagina h1 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #111;
+    margin-bottom: 6px;
+}
+
+.titulo-pagina p {
+    font-size: 0.72rem;
+    color: #666;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.linha-titulo {
+    width: 700px;
+    height: 2px;
+    background: #1a2b4a;
+}
+
+.btn-adicionar {
+    background: #1a2b4a;
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    font-family: inherit;
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+
+/* LISTA DE PRODUTOS */
+.lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 20px 24px;
+}
+
+.item-nome {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.item-nome strong {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    color: #111;
+}
+
+.preco {
+    font-size: 0.78rem;
+    font-weight: bold;
+    color: #111;
+    border: 1.5px solid #111;
+    padding: 2px 8px;
+}
+
+.item-info p {
+    font-size: 0.78rem;
+    color: #666;
+}
+
+.item-acoes {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-editar {
+    background: white;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    font-family: inherit;
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.btn-excluir {
+    background: white;
+    color: #cc0000;
+    border: 1px solid #cc0000;
+    padding: 8px 16px;
+    font-family: inherit;
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+
+/* FOOTER */
+footer {
+    background: #1e1e1e;
+    color: #aaa;
+    padding: 48px 40px 28px;
+}
+
+.footer-colunas {
+    display: flex;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto 32px;
+}
+
+.footer-col {
+    flex: 1;
+}
+
+.footer-logo {
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-col p {
+    font-size: 0.76rem;
+    color: #888;
+    line-height: 1.7;
+}
+
+.footer-col h4 {
+    color: white;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+}
+
+.footer-col a {
+    display: block;
+    color: #888;
+    text-decoration: none;
+    font-size: 0.76rem;
+    margin-bottom: 8px;
+}
+
+.footer-rodape {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.72rem;
+    color: #555;
+    max-width: 900px;
+    margin: 0 auto;
+}
