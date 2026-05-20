@@ -1,0 +1,293 @@
+/* RESET BÁSICO */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: #f0f0f0;
+    color: #1a1a1a;
+}
+
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #111;
+}
+
+nav a {
+    margin-left: 24px;
+    text-decoration: none;
+    color: #444;
+    font-size: 0.9rem;
+}
+
+nav a.ativo {
+    color: #111;
+    font-weight: bold;
+    border-bottom: 2px solid #111;
+    padding-bottom: 2px;
+}
+
+
+/* CARD DO NEGÓCIO */
+.card {
+    width: 520px;
+    margin: 40px auto;
+    background: white;
+    border: 1.5px solid #c8cfd8;
+}
+
+.banner {
+    background: #cfd6dd;
+    text-align: center;
+    padding: 48px 0;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.info {
+    padding: 20px;
+}
+
+.info-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 10px;
+}
+
+.logo-placeholder {
+    width: 52px;
+    height: 52px;
+    border: 1.5px solid #c8cfd8;
+    background: #f5f5f5;
+}
+
+.info-top h2 {
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #111;
+    margin-bottom: 6px;
+}
+
+.badges {
+    display: flex;
+    gap: 8px;
+}
+
+.badge {
+    font-size: 0.65rem;
+    font-weight: bold;
+    padding: 3px 8px;
+}
+
+.badge-cat {
+    background: #e8f0fb;
+    color: #2a5bc7;
+    border: 1px solid #b3c8ef;
+}
+
+.badge-rating {
+    background: #fdf3d0;
+    color: #7a5c00;
+    border: 1px solid #e8d07a;
+}
+
+.descricao {
+    font-size: 0.82rem;
+    color: #444;
+    line-height: 1.6;
+    padding: 10px 0;
+}
+
+.meta {
+    font-size: 0.76rem;
+    color: #555;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    line-height: 2;
+}
+
+.meta a {
+    color: #2a5bc7;
+    text-decoration: none;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    padding: 16px 20px 20px;
+}
+
+.btn-whatsapp {
+    width: 50%;
+    background: #25d366;
+    color: white;
+    border: none;
+    padding: 11px;
+    font-family: inherit;
+    font-size: 0.78rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-ligar {
+    width: 50%;
+    background: white;
+    color: #111;
+    border: 1.5px solid #bbb;
+    padding: 11px;
+    font-family: inherit;
+    font-size: 0.78rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* PRODUTOS E SERVIÇOS */
+.produtos {
+    width: 560px;
+    margin: 0 auto 60px;
+}
+
+.produtos h3 {
+    font-size: 0.82rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #111;
+    margin-bottom: 4px;
+}
+
+.linha-titulo {
+    width: 48px;
+    height: 3px;
+    background: #111;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.produto {
+    width: 260px;
+    border: 1px solid #ccc;
+    background: white;
+    padding: 14px;
+}
+
+.produto-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 6px;
+}
+
+.produto h4 {
+    font-size: 0.82rem;
+    font-weight: bold;
+    color: #111;
+}
+
+.preco {
+    font-size: 0.72rem;
+    font-weight: bold;
+    color: #111;
+    border: 1.5px solid #111;
+    padding: 2px 7px;
+}
+
+.produto p {
+    font-size: 0.76rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.btn-pedido {
+    width: 100%;
+    background: white;
+    border: 1px dashed #bbb;
+    color: #666;
+    font-family: inherit;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    padding: 7px 0;
+    cursor: pointer;
+}
+
+
+/* FOOTER */
+footer {
+    background: #1e1e1e;
+    color: #aaa;
+    padding: 48px 40px 28px;
+}
+
+.footer-colunas {
+    display: flex;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto 32px;
+}
+
+.footer-col {
+    flex: 1;
+}
+
+.footer-logo {
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-col p {
+    font-size: 0.76rem;
+    color: #888;
+    line-height: 1.7;
+}
+
+.footer-col h4 {
+    color: white;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+}
+
+.footer-col a {
+    display: block;
+    color: #888;
+    text-decoration: none;
+    font-size: 0.76rem;
+    margin-bottom: 8px;
+}
+
+.footer-rodape {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.72rem;
+    color: #555;
+    max-width: 900px;
+    margin: 0 auto;
+}
