@@ -1,4 +1,4 @@
-const BASE_URL = window.location.pathname.includes('pmv-si-2026-1-pe1-t1-pmv-si-2026-1-pe1-projcatalog')
+const BASE_URL = () => window.location.pathname.includes('pmv-si-2026-1-pe1-t1-pmv-si-2026-1-pe1-projcatalog')
     ? '/pmv-si-2026-1-pe1-t1-pmv-si-2026-1-pe1-projcatalog'
     : '';
 
@@ -23,8 +23,8 @@ function navigate(key, menu) {
 
         const route = menu[key]
 
-        if (route) window.location.href = `${BASE_URL}/${route}`
+        if (route) window.location.href = `${BASE_URL()}/${route}`
     }
 }
 
-export { updateActiveMenu, navigate }
+export { updateActiveMenu, navigate, BASE_URL }

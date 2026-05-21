@@ -1,3 +1,5 @@
+import { BASE_URL } from "../../../scripts/common.js"
+
 const promoCards = document.querySelectorAll(".promo-card");
 
 promoCards.forEach(card => {
@@ -5,7 +7,6 @@ promoCards.forEach(card => {
 
         const promoValue = card.querySelector(".promo-info").textContent;
 
-        console.log(promoValue);
-        if (promoValue) window.location.href = "/src/pages/client/details/details.html"
+        if (promoValue) window.location.href = `${BASE_URL()}/src/pages/client/details/details.html`
     });
 });

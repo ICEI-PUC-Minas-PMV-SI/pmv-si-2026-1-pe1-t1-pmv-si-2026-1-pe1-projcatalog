@@ -1,3 +1,5 @@
+import { BASE_URL } from "./src/scripts/common.js"
+
 const authForm = document.getElementById("authForm");
 const toggleMode = document.getElementById("toggleMode");
 const bottomText = document.getElementById("bottomText");
@@ -8,8 +10,6 @@ const empresaBtn = document.getElementById("empresaBtn");
 
 let isLogin = true;
 let isEmpresa = false;
-
-
 
 function createInput(label, placeholder, icon, type = "text") {
     return `
@@ -144,16 +144,10 @@ empresaBtn.addEventListener("click", () => {
 authForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const BASE_URL = window.location.pathname.includes('pmv-si-2026-1-pe1-t1-pmv-si-2026-1-pe1-projcatalog')
-        ? '/pmv-si-2026-1-pe1-t1-pmv-si-2026-1-pe1-projcatalog'
-        : '';
-
-    console.log({ BASE_URL, window })
-
     if (isEmpresa) window.location.href =
-        `${BASE_URL}/src/pages/bussines/dashboard/dashboard.html`;
+        `${BASE_URL()}/src/pages/bussines/dashboard/dashboard.html`;
     else window.location.href =
-        `${BASE_URL}/src/pages/client/catalog/catalog.html`;
+        `${BASE_URL()}/src/pages/client/catalog/catalog.html`;
 
 });
 
