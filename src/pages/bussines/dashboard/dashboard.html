@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Catalog</title>
+
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="/src/styles/styles.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+    <main class="dashboard-container">
+
+        <aside class="sidebar">
+            <div>
+
+                <div class="sidebar-brand">
+                    <h1>CATALOG<span>.</span></h1>
+                    <p>PAINEL DO LOJISTA</p>
+                </div>
+
+                <nav class="sidebar-menu">
+
+                    <button class="menu-item active">
+                        <i class="fa-solid fa-table-columns"></i>
+                        <p>Dashboard</p>
+                    </button>
+
+                    <button class="menu-item">
+                        <i class="fa-solid fa-store"></i>
+                        <p>Minha Loja</p>
+                    </button>
+
+                    <button class="menu-item">
+                        <i class="fa-solid fa-cube"></i>
+                        <p>Produtos/Serviços</p>
+                    </button>
+
+                </nav>
+            </div>
+            <button id="log-out">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Sair
+            </button>
+
+        </aside>
+
+        <section class="content">
+
+            <div class="content-header">
+                <h1>DASHBOARD</h1>
+                <p>RESUMO DO SEU NEGÓCIO</p>
+            </div>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <div class="icon-box">
+                        <i class="fa-regular fa-eye"></i>
+                    </div>
+
+                    <span>VISITAS NO MÊS</span>
+                    <h2 data-target="342">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <span>CLIQUES NO CONTATO</span>
+                    <h2 data-target="89">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                    </div>
+
+                    <span>AVALIAÇÃO MÉDIA</span>
+                    <h2 data-target="4.8">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-box"></i>
+                    </div>
+
+                    <span>PRODUTOS ATIVOS</span>
+                    <h2 data-target="2">0</h2>
+                </div>
+
+            </div>
+
+            <div class="actions-grid">
+
+                <div class="action-card">
+                    <h2>EDITAR PERFIL DA LOJA</h2>
+
+                    <p>
+                        Mantenha seu endereço, horário de funcionamento e
+                        descrição atualizados para atrair mais clientes.
+                    </p>
+
+                    <button>Acessar Perfil</button>
+                </div>
+
+                <div class="action-card">
+                    <h2>GERENCIAR CATÁLOGO</h2>
+
+                    <p>
+                        Adicione, edite ou remova produtos e serviços que
+                        sua loja oferece.
+                    </p>
+
+                    <button class="secondary">
+                        Ver Produtos
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-grid">
+
+            <div>
+                <h2>CATALOG</h2>
+                <p>
+                    Conectando você aos melhores negócios locais.
+                </p>
+            </div>
+
+            <div>
+                <h4>Explorar</h4>
+
+                <ul>
+                    <li>Todas as categorias</li>
+                    <li>Buscar</li>
+                    <li>Favoritos</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Para Empresas</h4>
+
+                <ul>
+                    <li>Cadastrar negócio</li>
+                    <li>Painel</li>
+                    <li>Suporte</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Sobre</h4>
+
+                <ul>
+                    <li>Quem somos</li>
+                    <li>Contato</li>
+                    <li>Termos de uso</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-copy">
+            © 2026 CATALOG. Todos os direitos reservados.
+        </div>
+
+    </footer>
+
+    <script type="module" src="dashboard.js"></script>
+    <script type="module" src="/src/scripts/sidebar.js"></script>
+</body>
+
+</html>

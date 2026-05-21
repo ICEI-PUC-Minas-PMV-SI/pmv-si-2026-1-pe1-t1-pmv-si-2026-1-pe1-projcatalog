@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CATALOG</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <link rel="stylesheet" href="/src/styles/styles.css" />
+    <link rel="stylesheet" href="catalog.css" />
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo-container">
+            <div class="logo">CATALOG<span>.</span></div>
+        </div>
+
+        <div class="link-container">
+            <nav class="menu">
+                <a href="#" class="active">Início</a>
+                <a href="#">Favoritos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <h1>
+                ENCONTRE OS MELHORES<br>
+                NEGÓCIOS LOCAIS
+            </h1>
+
+            <div class="search-box">
+
+                <input class="search-input" type="text" placeholder="Buscar por nome ou produto..." />
+
+                <button class="search-btn">
+                    BUSCAR
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- FILTERS -->
+
+        <div class="filters">
+
+            <div class="filters-title">
+                <i class="fa-solid fa-filter"></i>
+                CATEGORIAS:
+            </div>
+
+            <button class="filter-btn active">TODOS</button>
+            <button class="filter-btn">RESTAURANTES</button>
+            <button class="filter-btn">PADARIAS</button>
+            <button class="filter-btn">SERVIÇOS</button>
+            <button class="filter-btn">MODA</button>
+            <button class="filter-btn">MERCADOS</button>
+            <button class="filter-btn">BELEZA</button>
+
+        </div>
+
+        <!-- PROMOTIONS -->
+
+        <h2 class="section-title">
+            PROMOÇÕES
+        </h2>
+
+        <section class="promo-grid">
+
+            <div class="promo-card">
+                <div class="promo-image">[IMAGEM]</div>
+                <div class="promo-info">Promoção 1</div>
+            </div>
+
+            <div class="promo-card">
+                <div class="promo-image">[IMAGEM]</div>
+                <div class="promo-info">Promoção 2</div>
+            </div>
+
+            <div class="promo-card">
+                <div class="promo-image">[IMAGEM]</div>
+                <div class="promo-info">Promoção 3</div>
+            </div>
+
+            <div class="promo-card">
+                <div class="promo-image">[IMAGEM]</div>
+                <div class="promo-info">Promoção 4</div>
+            </div>
+
+        </section>
+
+        <div class="slider-dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- STORE SECTION -->
+
+        <section class="store-section">
+
+            <button class="arrow-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+
+            <div>
+
+                <div class="store-card">
+
+                    <div class="store-image">
+                        [FOTO DA LOJA]
+                    </div>
+
+                    <div class="store-info">
+
+                        <h3>Café Central</h3>
+
+                        <p>Cafeteria</p>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="helper">
+                    ← Arraste para esquerda/direita →<br>
+                    ou use os botões laterais
+                </div>
+
+            </div>
+
+            <button class="arrow-btn">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <!-- REVIEWS -->
+
+            <div class="review-card">
+
+                <div class="review-header">
+
+                    <small>AVALIAÇÕES</small>
+
+                    <div class="review-score">
+                        4.0 ★★★★★
+                    </div>
+
+                    <div class="bar">
+                        <div class="bar-fill" style="width:90%"></div>
+                    </div>
+
+                    <div class="bar">
+                        <div class="bar-fill" style="width:70%"></div>
+                    </div>
+
+                    <div class="bar">
+                        <div class="bar-fill" style="width:50%"></div>
+                    </div>
+
+                    <div class="bar">
+                        <div class="bar-fill" style="width:30%"></div>
+                    </div>
+
+                    <div class="bar">
+                        <div class="bar-fill" style="width:15%"></div>
+                    </div>
+
+                </div>
+
+                <button class="review-btn">
+                    <i class="fa-regular fa-comment"></i>
+                    Escrever Avaliação
+                </button>
+
+                <div class="review-item">
+                    <strong>João Silva ★★★★★</strong>
+                    Atendimento excelente e ambiente agradável.
+                </div>
+
+                <div class="review-item">
+                    <strong>Maria Santos ★★★★☆</strong>
+                    Muito bom, recomendo!
+                </div>
+
+                <div class="review-item">
+                    <strong>Pedro Costa ★★★★★</strong>
+                    Ótimo local, voltarei com certeza.
+                </div>
+
+                <button class="load-btn">
+                    Carregar Mais Avaliações
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-grid">
+
+            <div>
+                <h2>CATALOG</h2>
+                <p>
+                    Conectando você aos melhores negócios locais.
+                </p>
+            </div>
+
+            <div>
+                <h4>Explorar</h4>
+
+                <ul>
+                    <li>Todas as categorias</li>
+                    <li>Buscar</li>
+                    <li>Favoritos</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Para Empresas</h4>
+
+                <ul>
+                    <li>Cadastrar negócio</li>
+                    <li>Painel</li>
+                    <li>Suporte</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Sobre</h4>
+
+                <ul>
+                    <li>Quem somos</li>
+                    <li>Contato</li>
+                    <li>Termos de uso</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-copy">
+            © 2026 CATALOG. Todos os direitos reservados.
+        </div>
+
+    </footer>
+
+    <script type="module" src="catalog.js"></script>
+    <script type="module" src="/src/scripts/header.js"></script>
+</body>
+
+</html>
