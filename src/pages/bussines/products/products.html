@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Catalog</title>
+
+    <link rel="stylesheet" href="products.css" />
+    <link rel="stylesheet" href="../../../styles/styles.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+    <main class="dashboard-container">
+
+        <aside class="sidebar">
+            <div>
+
+                <div class="sidebar-brand">
+                    <h1>CATALOG<span>.</span></h1>
+                    <p>PAINEL DO LOJISTA</p>
+                </div>
+
+                <nav class="sidebar-menu">
+
+                    <button class="menu-item">
+                        <i class="fa-solid fa-table-columns"></i>
+                        <p>Dashboard</p>
+                    </button>
+
+                    <button class="menu-item">
+                        <i class="fa-solid fa-store"></i>
+                        <p>Minha Loja</p>
+                    </button>
+
+                    <button class="menu-item">
+                        <i class="fa-solid fa-cube"></i>
+                        <p>Produtos/Serviços</p>
+                    </button>
+
+                </nav>
+            </div>
+            <button id="log-out">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Sair
+            </button>
+
+        </aside>
+
+        <section class="content">
+
+            <div class="content-header">
+
+                <div>
+                    <h1>PRODUTOS & SERVIÇOS</h1>
+                    <p>GERENCIE O CATÁLOGO DA SUA LOJA</p>
+                </div>
+
+                <button class="add-item-btn">
+                    <i class="fa-solid fa-plus"></i>
+                    ADICIONAR ITEM
+                </button>
+
+            </div>
+
+            <!-- FORM -->
+            <div class="product-form-container">
+
+                <form class="product-form">
+
+                    <div class="form-top">
+
+                        <h3>
+                            <i class="fa-regular fa-circle-dot"></i>
+                            <span class="form-title">
+                                NOVO ITEM
+                            </span>
+                        </h3>
+
+                        <button type="button" class="cancel-btn">
+                            CANCELAR
+                        </button>
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label>NOME DO PRODUTO/SERVIÇO</label>
+
+                            <input type="text" id="product-name" placeholder="Digite o nome..." />
+
+                        </div>
+
+                        <div class="form-group small">
+
+                            <label>PREÇO</label>
+
+                            <input type="text" id="product-price" placeholder="R$ 0,00" />
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group full">
+
+                        <label>DESCRIÇÃO</label>
+
+                        <textarea rows="4" id="product-description" placeholder="Descreva o item..."></textarea>
+
+                    </div>
+
+                    <div class="form-actions">
+
+                        <button type="submit" class="save-item-btn">
+                            SALVAR ITEM
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+            <!-- LISTA -->
+            <div class="products-list">
+
+                <!-- CARD -->
+                <div class="product-card">
+
+                    <div class="product-info">
+
+                        <div class="product-title">
+
+                            <h3 class="card-title">
+                                PRODUTO TESTE 1
+                            </h3>
+
+                            <span class="price-badge card-price">
+                                R$ 50,00
+                            </span>
+
+                        </div>
+
+                        <p class="card-description">
+                            Uma breve descrição do produto.
+                        </p>
+
+                    </div>
+
+                    <div class="product-actions">
+
+                        <button class="edit-btn">
+                            <i class="fa-regular fa-pen-to-square"></i>
+                            EDITAR
+                        </button>
+
+                        <button class="delete-btn">
+                            <i class="fa-regular fa-trash-can"></i>
+                            EXCLUIR
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+                <div class="product-card">
+
+                    <div class="product-info">
+
+                        <div class="product-title">
+
+                            <h3 class="card-title">
+                                SERVIÇO TESTE 2
+                            </h3>
+
+                            <span class="price-badge card-price">
+                                R$ 100,00
+                            </span>
+
+                        </div>
+
+                        <p class="card-description">
+                            Consultoria de 1 hora.
+                        </p>
+
+                    </div>
+
+                    <div class="product-actions">
+
+                        <button class="edit-btn">
+                            <i class="fa-regular fa-pen-to-square"></i>
+                            EDITAR
+                        </button>
+
+                        <button class="delete-btn">
+                            <i class="fa-regular fa-trash-can"></i>
+                            EXCLUIR
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-grid">
+
+            <div>
+                <h2>CATALOG</h2>
+                <p>
+                    Conectando você aos melhores negócios locais.
+                </p>
+            </div>
+
+            <div>
+                <h4>Explorar</h4>
+
+                <ul>
+                    <li>Todas as categorias</li>
+                    <li>Buscar</li>
+                    <li>Favoritos</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Para Empresas</h4>
+
+                <ul>
+                    <li>Cadastrar negócio</li>
+                    <li>Painel</li>
+                    <li>Suporte</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Sobre</h4>
+
+                <ul>
+                    <li>Quem somos</li>
+                    <li>Contato</li>
+                    <li>Termos de uso</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-copy">
+            © 2026 CATALOG. Todos os direitos reservados.
+        </div>
+
+    </footer>
+
+    <script type="module" src="products.js"></script>
+    <script type="module" src="../../../scripts/sidebar.js"></script>
+</body>
+
+</html>

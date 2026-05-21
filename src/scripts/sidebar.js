@@ -5,7 +5,7 @@ const menuButtons = document.querySelectorAll(".menu-item");
 const menu = {
     "Minha Loja": "src/pages/bussines/profile/profile.html",
     "Dashboard": "src/pages/bussines/dashboard/dashboard.html",
-    "Produtos/Serviços": "src/pages/bussines/profile/profile.html"
+    "Produtos/Serviços": "src/pages/bussines/products/products.html"
 }
 
 menuButtons.forEach(link => {

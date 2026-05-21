@@ -1,0 +1,276 @@
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.content-header h1 {
+    font-size: 2.3rem;
+    font-weight: 900;
+    color: #1d2a44;
+    margin-bottom: .4rem;
+}
+
+.content-header p {
+    font-size: .85rem;
+    letter-spacing: 4px;
+    font-weight: 700;
+    color: #61708a;
+}
+
+.add-item-btn {
+    background: #1d2a44;
+    color: #fff;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    box-shadow: 4px 4px 0 #c9ced6;
+    transition: .2s ease;
+}
+
+.add-item-btn:hover {
+    transform: translateY(-2px);
+}
+
+.product-form-container {
+    display: none;
+    background: #eef1f5;
+    border: 3px solid #2f3a4f;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.product-form-container.active {
+    display: block;
+    animation: fadeIn .25s ease;
+}
+
+.product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* FORM TOP */
+
+.form-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-top h3 {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    font-size: .9rem;
+    font-weight: 900;
+    color: #1d2a44;
+    letter-spacing: 1px;
+}
+
+.cancel-btn {
+    background: #1d2a44;
+    color: #fff;
+    border: none;
+    padding: .8rem 1.4rem;
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 #c9ced6;
+}
+
+/* FORM ROW */
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.small {
+    max-width: 220px;
+}
+
+.form-group label {
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #526177;
+    margin-bottom: .5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: .9rem 1rem;
+    border: 1px solid #d6dce5;
+    background: #fff;
+    font-size: .9rem;
+    color: #1d2a44;
+    outline: none;
+    resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #1d2a44;
+}
+
+/* ACTIONS */
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.save-item-btn {
+    background: #08a045;
+    color: #fff;
+    border: none;
+    padding: .9rem 1.5rem;
+    font-size: .75rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 #c9ced6;
+}
+
+.products-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.product-card {
+    background: #f7f8fa;
+    border: 1px solid #d6dce5;
+    padding: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-title {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    margin-bottom: .5rem;
+}
+
+.product-title h3 {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #1d2a44;
+}
+
+.price-badge {
+    border: 3px solid #2f3a4f;
+    padding: .2rem .5rem;
+    font-size: .75rem;
+    font-weight: 900;
+    color: #1d2a44;
+    background: #fff;
+}
+
+.product-info p {
+    color: #5f6d82;
+    font-size: .9rem;
+}
+
+.product-actions {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+}
+
+.edit-btn,
+.delete-btn {
+    border: 1px solid #d6dce5;
+    background: #fff;
+    padding: .8rem 1rem;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.delete-btn {
+    color: #ff3d3d;
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .content {
+        padding: 2rem;
+    }
+
+    .content-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .form-row,
+    .product-card {
+        flex-direction: column;
+    }
+
+    .product-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .content {
+        padding: 1rem;
+    }
+
+    .product-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .edit-btn,
+    .delete-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+}
