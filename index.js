@@ -143,9 +143,9 @@ authForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
     if (isEmpresa) window.location.href =
-        "/src/pages/bussines/dashboard/dashboard.html";
+        "./src/pages/bussines/dashboard/dashboard.html";
     else window.location.href =
-        "/src/pages/client/catalog/catalog.html";
+        "./src/pages/client/catalog/catalog.html";
 
 });
 
