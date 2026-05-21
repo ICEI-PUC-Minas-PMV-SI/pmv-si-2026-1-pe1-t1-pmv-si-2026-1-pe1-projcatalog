@@ -1,4 +1,4 @@
-import { updateActiveMenu, navigate } from "/src/scripts/common.js"
+import { updateActiveMenu, navigate } from "./common.js"
 
 const menuButtons = document.querySelectorAll(".menu-item");
 
