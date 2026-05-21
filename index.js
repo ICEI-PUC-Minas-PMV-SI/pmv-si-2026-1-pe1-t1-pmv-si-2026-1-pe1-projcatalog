@@ -9,9 +9,7 @@ const empresaBtn = document.getElementById("empresaBtn");
 let isLogin = true;
 let isEmpresa = false;
 
-const BASE_URL = window.location.pathname.includes('pmv-si-2026-1-pe1-t1-pmv-si-2026-1-pe1-projcatalog')
-    ? '/pmv-si-2026-1-pe1-t1-pmv-si-2026-1-pe1-projcatalog'
-    : '';
+
 
 function createInput(label, placeholder, icon, type = "text") {
     return `
@@ -145,6 +143,12 @@ empresaBtn.addEventListener("click", () => {
 
 authForm.addEventListener("submit", (event) => {
     event.preventDefault();
+
+    const BASE_URL = window.location.pathname.includes('pmv-si-2026-1-pe1-t1-pmv-si-2026-1-pe1-projcatalog')
+        ? '/pmv-si-2026-1-pe1-t1-pmv-si-2026-1-pe1-projcatalog'
+        : '';
+
+    console.log({ BASE_URL, window })
 
     if (isEmpresa) window.location.href =
         `${BASE_URL}/src/pages/bussines/dashboard/dashboard.html`;
