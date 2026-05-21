@@ -1,3 +1,7 @@
+const BASE_URL = window.location.pathname.includes('pmv-si-2026-1-pe1-t1-pmv-si-2026-1-pe1-projcatalog')
+    ? '/pmv-si-2026-1-pe1-t1-pmv-si-2026-1-pe1-projcatalog'
+    : '';
+
 function updateActiveMenu(btnList, menu) {
     const currentPath = window.location.pathname;
 
@@ -19,7 +23,7 @@ function navigate(key, menu) {
 
         const route = menu[key]
 
-        if (route) window.location.href = route
+        if (route) window.location.href = `${BASE_URL}/${route}`
     }
 }
 
