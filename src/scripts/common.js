@@ -23,6 +23,8 @@ function navigate(key, menu) {
 
         const route = menu[key]
 
+        console.log({ route, menu, key, BASE_URL })
+
         if (route) window.location.href = `${BASE_URL}/${route}`
     }
 }
