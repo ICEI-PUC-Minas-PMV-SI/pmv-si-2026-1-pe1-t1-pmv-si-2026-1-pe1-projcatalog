@@ -1,6 +1,6 @@
 cff-version: 1.0.0
 title: Catalog
-message: >-
+message:
   Please cite this software using these metadata.
 type: software
 authors:
@@ -23,9 +23,9 @@ authors:
  keywords:
   - Catalog
   - Catalogo de produtos e serviços
-repository-code: >-
+repository-code:
   https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2026-1-pe1-t1-pmv-si-2026-1-pe1-projcatalog
-abstract: >-
+abstract:
   O projeto consiste no desenvolvimento de uma plataforma digital voltada para a divulgação de pequenos negócios locais.
 keywords:
   - Desenvolvimento Web
