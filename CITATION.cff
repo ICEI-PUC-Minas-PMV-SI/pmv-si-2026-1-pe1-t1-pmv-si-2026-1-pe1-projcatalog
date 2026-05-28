@@ -1,35 +1,42 @@
 cff-version: 1.0.0
 title: Catalog
-message:
-  Please cite this software using these metadata.
+message: "Please cite this software using these metadata."
 type: software
+
 authors:
   - family-names: Costa Alves Coelho
     given-names: Osmar
     affiliation: PUC Minas
+
   - family-names: Alves dos Santos
     given-names: Diego
     affiliation: PUC Minas
+
   - family-names: Corrêa Rocha
     given-names: Lucas
     affiliation: PUC Minas
+
   - family-names: do Amaral Lima
     given-names: Davi
     affiliation: PUC Minas
-    - name-suffix: Prof.
+
+  - family-names: Costa
+    given-names: Marco Rodrigo
+    name-suffix: Prof.
     affiliation: PUC Minas
-    family-names: Rodrigo Costa
-    given-names: Marco 
- keywords:
-  - Catalog
-  - Catalogo de produtos e serviços
-repository-code:
-  https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2026-1-pe1-t1-pmv-si-2026-1-pe1-projcatalog
-abstract:
-  O projeto consiste no desenvolvimento de uma plataforma digital voltada para a divulgação de pequenos negócios locais.
+
 keywords:
+  - Catalog
+  - Catálogo de produtos e serviços
   - Desenvolvimento Web
   - HTML
   - CSS
   - JavaScript
-date-released: '2026-05-24'
+
+repository-code: "https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2026-1-pe1-t1-pmv-si-2026-1-pe1-projcatalog"
+
+abstract: >
+  O projeto consiste no desenvolvimento de uma plataforma digital
+  voltada para a divulgação de pequenos negócios locais.
+
+date-released: 2026-05-24
