@@ -1,33 +1,35 @@
-# This CITATION.cff file was generated with cffinit.
-# Visit https://bit.ly/cffinit to generate yours today!
-
-cff-version: 1.2.0
-title: Web Application Template
+cff-version: 1.0.0
+title: Catalog
 message: >-
-  Repositório padrão para o Eixo 1 - Projeto 1: Aplicações
-  Web da PUC Minas.
+  Please cite this software using these metadata.
 type: software
 authors:
-  - given-names: Aluno 1
-    family-names: Nome Completo
-    email: aluno@pucminas.br
+  - family-names: Costa Alves Coelho
+    given-names: Osmar
     affiliation: PUC Minas
-  - given-names: Hugo
-    name-particle: 'B '
-    family-names: de Paula
-    name-suffix: Prof.
-    email: hugo@pucminas.br
+  - family-names: Alves dos Santos
+    given-names: Diego
     affiliation: PUC Minas
-    orcid: 'https://orcid.org/0000-0002-6193-3205'
+  - family-names: Corrêa Rocha
+    given-names: Lucas
+    affiliation: PUC Minas
+  - family-names: do Amaral Lima
+    given-names: Davi
+    affiliation: PUC Minas
+    - name-suffix: Prof.
+    affiliation: PUC Minas
+    family-names: Rodrigo Costa
+    given-names: Marco 
+ keywords:
+  - Catalog
+  - Catalogo de produtos e serviços
 repository-code: >-
-  https://github.com/ICEI-PUC-Minas-PMV-SI/WebApplicationProject-Template
+  https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2026-1-pe1-t1-pmv-si-2026-1-pe1-projcatalog
 abstract: >-
-  Descrever resumidamente, em um ou dois parágrafos, o
-  projeto que foi desenvolvido.
+  O projeto consiste no desenvolvimento de uma plataforma digital voltada para a divulgação de pequenos negócios locais.
 keywords:
   - Desenvolvimento Web
   - HTML
   - CSS
   - JavaScript
-  - Template
-date-released: '2024-06-23'
+date-released: '2026-05-24'
