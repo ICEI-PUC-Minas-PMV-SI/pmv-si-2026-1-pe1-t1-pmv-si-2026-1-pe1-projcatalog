@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CATALOG. — Meus Favoritos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="favoritos.css"/>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <span class="topbar-logo">CATALOG.</span>
+    <nav class="topbar-nav">
+      <a href="#" class="nav-link">Início</a>
+      <a href="#" class="nav-link">Categorias</a>
+      <a href="#" class="nav-link active">Favoritos</a>
+      <a href="#" class="nav-link">Seus Negócios</a>
+    </nav>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <div class="content">
+
+    <div class="page-header">
+      <div class="page-header-left">
+        <h1>Meus Favoritos</h1>
+        <p id="contador">6 estabelecimentos salvos</p>
+      </div>
+      <div class="heart-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="cards-grid">
+
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card-image">
+          <span class="card-badge">Cafeteria</span>
+          <button class="card-remove" onclick="removerFavorito(this)">✕</button>
+          <div class="card-image-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Image Placeholder</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Café Central</div>
+          <div class="card-rating">
+            <div class="stars">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star empty">★</span>
+            </div>
+            <span class="rating-value">4.8</span>
+            <span class="rating-count">(124)</span>
+          </div>
+          <div class="card-address">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Rua das Flores, 123
+          </div>
+          <div class="card-footer">
+            <span class="card-distance">0,5 km</span>
+            <button class="btn-detalhes">Ver Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="card-image">
+          <span class="card-badge">Padaria</span>
+          <button class="card-remove" onclick="removerFavorito(this)">✕</button>
+          <div class="card-image-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Image Placeholder</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Padaria Artesanal</div>
+          <div class="card-rating">
+            <div class="stars">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star empty">★</span>
+            </div>
+            <span class="rating-value">4.6</span>
+            <span class="rating-count">(89)</span>
+          </div>
+          <div class="card-address">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Av. Principal, 458
+          </div>
+          <div class="card-footer">
+            <span class="card-distance">1,2 km</span>
+            <button class="btn-detalhes">Ver Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card-image">
+          <span class="card-badge">Restaurante</span>
+          <button class="card-remove" onclick="removerFavorito(this)">✕</button>
+          <div class="card-image-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Image Placeholder</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Restaurante Sabor</div>
+          <div class="card-rating">
+            <div class="stars">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star empty">★</span>
+            </div>
+            <span class="rating-value">4.7</span>
+            <span class="rating-count">(156)</span>
+          </div>
+          <div class="card-address">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Praça Central, 789
+          </div>
+          <div class="card-footer">
+            <span class="card-distance">2,3 km</span>
+            <button class="btn-detalhes">Ver Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <div class="card-image">
+          <span class="card-badge">Mercado</span>
+          <button class="card-remove" onclick="removerFavorito(this)">✕</button>
+          <div class="card-image-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Image Placeholder</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Empório Gourmet</div>
+          <div class="card-rating">
+            <div class="stars">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star empty">★</span>
+            </div>
+            <span class="rating-value">4.5</span>
+            <span class="rating-count">(67)</span>
+          </div>
+          <div class="card-address">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Rua do Comércio, 221
+          </div>
+          <div class="card-footer">
+            <span class="card-distance">1,0 km</span>
+            <button class="btn-detalhes">Ver Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card">
+        <div class="card-image">
+          <span class="card-badge">Restaurante</span>
+          <button class="card-remove" onclick="removerFavorito(this)">✕</button>
+          <div class="card-image-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Image Placeholder</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Bistrô da Esquina</div>
+          <div class="card-rating">
+            <div class="stars">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            </div>
+            <span class="rating-value">4.9</span>
+            <span class="rating-count">(203)</span>
+          </div>
+          <div class="card-address">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Esquina da Alegria, 555
+          </div>
+          <div class="card-footer">
+            <span class="card-distance">0,8 km</span>
+            <button class="btn-detalhes">Ver Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card">
+        <div class="card-image">
+          <span class="card-badge">Padaria</span>
+          <button class="card-remove" onclick="removerFavorito(this)">✕</button>
+          <div class="card-image-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Image Placeholder</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Confeitaria Doce Mel</div>
+          <div class="card-rating">
+            <div class="stars">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star empty">★</span>
+            </div>
+            <span class="rating-value">4.4</span>
+            <span class="rating-count">(52)</span>
+          </div>
+          <div class="card-address">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Rua Doce, 111
+          </div>
+          <div class="card-footer">
+            <span class="card-distance">0,6 km</span>
+            <button class="btn-detalhes">Ver Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">CATALOG</span>
+        <p class="footer-tagline">Conectando você aos melhores<br>negócios locais.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explorar</h4>
+        <a href="#">Todas as categorias</a>
+        <a href="#">Buscar</a>
+        <a href="#">Favoritos</a>
+      </div>
+      <div class="footer-col">
+        <h4>Para Empresas</h4>
+        <a href="#">Cadastrar negócio</a>
+        <a href="#">Painel</a>
+        <a href="#">Suporte</a>
+      </div>
+      <div class="footer-col">
+        <h4>Sobre</h4>
+        <a href="#">Quem somos</a>
+        <a href="#">Contato</a>
+        <a href="#">Termos de uso</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 CATALOG. Todos os direitos reservados.</div>
+  </footer>
+
+  <script src="favoritos.js"></script>
+</body>
+</html>
