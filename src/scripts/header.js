@@ -1,6 +1,7 @@
 import { updateActiveMenu, navigate } from "./common.js"
 
 const menuLinks = document.querySelectorAll(".menu a");
+const userContainer = document.querySelector(".user-container");
 
 const menu = {
     "Favoritos": "src/pages/client/favorites/favorites.html",
@@ -12,3 +13,36 @@ menuLinks.forEach(link => {
 
     updateActiveMenu(menuLinks, menu)
 });
+
+function getLoggedUser() {
+    return JSON.parse(
+        localStorage.getItem("loggedUser")
+    );
+}
+
+function fillLoggedUserName() {
+    const userNameElement =
+        document.getElementById("logged-user-name");
+
+    const loggedUser = getLoggedUser();
+
+    if (!loggedUser || !userNameElement) return;
+
+    if (loggedUser.type === "client") {
+        userNameElement.textContent =
+            loggedUser.data.nome;
+    }
+
+    if (loggedUser.type === "company") {
+        userNameElement.textContent =
+            loggedUser.data.razaoSocial;
+    }
+}
+
+userContainer?.addEventListener("click", () => {
+    localStorage.setItem("loggedUser", JSON.stringify(undefined));
+
+    window.location.href = "/index.html";
+});
+
+fillLoggedUserName();

@@ -25,6 +25,11 @@
                 <a href="#">Favoritos</a>
             </nav>
         </div>
+
+        <div class="user-container">
+            <span id="logged-user-name"></span>
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
     </header>
 
     <main>
@@ -99,11 +104,7 @@
 
         </section>
 
-        <div class="slider-dots">
-            <div class="dot active"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-        </div>
+        <div class="slider-dots" id="sliderDots"></div>
 
         <div class="divider"></div>
 
@@ -111,34 +112,14 @@
 
         <section class="store-section">
 
-            <button class="arrow-btn">
+            <button id="prevStore" class="arrow-btn">
                 <i class="fa-solid fa-arrow-left"></i>
             </button>
 
             <div>
 
-                <div class="store-card">
-
-                    <div class="store-image">
-                        [FOTO DA LOJA]
-                    </div>
-
-                    <div class="store-info">
-
-                        <h3>Café Central</h3>
-
-                        <p>Cafeteria</p>
-
-                        <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-
-                    </div>
-
+                <div class="store-card-wrapper">
+                    <div class="store-card"></div>
                 </div>
 
                 <div class="helper">
@@ -148,7 +129,7 @@
 
             </div>
 
-            <button class="arrow-btn">
+            <button id="nextStore" class="arrow-btn">
                 <i class="fa-solid fa-arrow-right"></i>
             </button>
 

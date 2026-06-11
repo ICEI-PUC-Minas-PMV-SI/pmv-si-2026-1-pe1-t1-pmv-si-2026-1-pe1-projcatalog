@@ -21,9 +21,17 @@ body {
   border-bottom: 1px solid #d1d5db;
 
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: space-between;
+}
+
+.user-container {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  gap: 8px;
+  cursor: pointer;
 }
 
 .logo-container {
