@@ -42,7 +42,7 @@ function fillLoggedUserName() {
 userContainer?.addEventListener("click", () => {
     localStorage.setItem("loggedUser", JSON.stringify(undefined));
 
-    window.location.href = `${BASE_URL()}/`;
+    window.location.href = `${BASE_URL()}/index.html`;
 });
 
 fillLoggedUserName();
