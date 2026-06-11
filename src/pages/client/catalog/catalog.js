@@ -1,6 +1,127 @@
 import { BASE_URL } from "../../../scripts/common.js"
 
 const promoCards = document.querySelectorAll(".promo-card");
+
+const reviewModal =
+    document.getElementById(
+        "reviewModal"
+    );
+
+document
+    .getElementById("reviewBtn")
+    .addEventListener(
+        "click",
+        () => {
+
+            reviewModal.classList.add(
+                "active"
+            );
+        }
+    );
+
+document
+    .getElementById(
+        "cancelReview"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            reviewModal.classList.remove(
+                "active"
+            );
+        }
+    );
+
+document
+    .getElementById("saveReview")
+    .addEventListener(
+        "click",
+        () => {
+
+            const loggedUser =
+                JSON.parse(
+                    localStorage.getItem(
+                        "loggedUser"
+                    )
+                );
+
+            if (!loggedUser) return;
+
+            const companies =
+                JSON.parse(
+                    localStorage.getItem(
+                        "companies"
+                    )
+                );
+
+            const company =
+                getFilteredCompanies()[
+                currentStore
+                ];
+
+            const note =
+                Number(
+                    document.getElementById(
+                        "reviewNote"
+                    ).value
+                );
+
+            const comment =
+                document
+                    .getElementById(
+                        "reviewComment"
+                    )
+                    .value
+                    .trim();
+
+            if (!comment) {
+
+                alert(
+                    "Digite um comentário."
+                );
+
+                return;
+            }
+
+            const dbCompany =
+                companies[
+                company.email
+                ];
+
+            if (!dbCompany.avaliacoes) {
+
+                dbCompany.avaliacoes = {};
+            }
+
+            dbCompany.avaliacoes[
+                loggedUser.data.email
+            ] = {
+
+                comentario: comment,
+                nota: note
+            };
+
+            localStorage.setItem(
+                "companies",
+                JSON.stringify(companies)
+            );
+
+            company.avaliacoes =
+                dbCompany.avaliacoes;
+
+            reviewModal.classList.remove(
+                "active"
+            );
+
+            document.getElementById(
+                "reviewComment"
+            ).value = "";
+
+            renderReviews();
+        }
+    );
+
 let currentStore = 0;
 let selectedCategory = "TODOS";
 let searchTerm = "";
@@ -26,7 +147,138 @@ promoCards.forEach(card => {
 
 const promotions = getFilteredPromotions();
 
-console.log("Promoções encontradas:", promotions.length);
+function getCompanyRating(company) {
+
+    const reviews =
+        Object.values(
+            company.avaliacoes || {}
+        );
+
+    if (!reviews.length) {
+        return {
+            average: 0,
+            total: 0
+        };
+    }
+
+    const average =
+        reviews.reduce(
+            (sum, review) =>
+                sum + review.nota,
+            0
+        ) / reviews.length;
+
+    return {
+        average,
+        total: reviews.length
+    };
+}
+
+function renderReviews() {
+
+    const company =
+        getFilteredCompanies()[currentStore];
+
+    if (!company) return;
+
+    const reviewsContainer =
+        document.getElementById(
+            "reviewsContainer"
+        );
+
+    const reviewScore =
+        document.getElementById(
+            "reviewScore"
+        );
+
+    const reviewBtn =
+        document.getElementById(
+            "reviewBtn"
+        );
+
+    const reviews =
+        Object.entries(
+            company.avaliacoes || {}
+        );
+
+    reviewsContainer.innerHTML = "";
+
+    if (!reviews.length) {
+
+        reviewScore.innerHTML =
+            "0.0 ☆☆☆☆☆";
+
+    } else {
+
+        const average =
+            reviews.reduce(
+                (sum, [, review]) =>
+                    sum + review.nota,
+                0
+            ) / reviews.length;
+
+        reviewScore.innerHTML =
+            `${average.toFixed(1)} ${getStars(Math.round(average))}`;
+    }
+
+    reviews.forEach(
+        ([email, review]) => {
+
+            reviewsContainer.innerHTML += `
+                <div class="review-item">
+
+                    <strong>
+                        ${email}
+                        ${getStars(review.nota)}
+                    </strong>
+
+                    ${review.comentario}
+
+                </div>
+            `;
+        }
+    );
+
+    const loggedUser =
+        JSON.parse(
+            localStorage.getItem(
+                "loggedUser"
+            )
+        );
+
+    const alreadyReviewed =
+        loggedUser &&
+        company.avaliacoes &&
+        company.avaliacoes[
+        loggedUser.data.email
+        ];
+
+    reviewBtn.style.display =
+        alreadyReviewed
+            ? "none"
+            : "block";
+}
+
+function getStars(nota) {
+
+    let html = "";
+
+    for (let i = 1; i <= 5; i++) {
+
+        html += i <= nota
+            ? "★"
+            : "☆";
+    }
+
+    return html;
+}
+
+function saveSelectedStore(company) {
+    localStorage.setItem(
+        "selectedStore",
+        JSON.stringify(company)
+    );
+}
 
 function attachPromoEvents() {
 
@@ -35,6 +287,21 @@ function attachPromoEvents() {
         .forEach(card => {
 
             card.addEventListener("click", () => {
+
+                const email =
+                    card.dataset.email;
+
+                const companies =
+                    JSON.parse(
+                        localStorage.getItem("companies")
+                    ) || {};
+
+                const company =
+                    companies[email];
+
+                if (company) {
+                    saveSelectedStore(company);
+                }
 
                 window.location.href =
                     `${BASE_URL()}/src/pages/client/details/details.html`;
@@ -109,8 +376,18 @@ function animateStore(direction) {
     const company =
         companies[currentStore];
 
+    renderReviews(company);
+
     nextCard.innerHTML =
         getStoreCardHTML(company);
+
+    nextCard.addEventListener("click", () => {
+
+        saveSelectedStore(company);
+
+        window.location.href =
+            `${BASE_URL()}/src/pages/client/details/details.html`;
+    });
 
     wrapper.appendChild(nextCard);
 
@@ -146,6 +423,9 @@ function animateStore(direction) {
         },
         { once: true }
     );
+
+    renderReviews();
+
 }
 
 function renderPromotions() {
@@ -236,7 +516,19 @@ function renderStore() {
     const storeCard =
         document.querySelector(".store-card");
 
+
+
     if (!companies.length) {
+        const company =
+            companies[currentStore];
+
+        storeCard.onclick = () => {
+
+            saveSelectedStore(company);
+
+            window.location.href =
+                `${BASE_URL()}/src/pages/client/details/details.html`;
+        };
 
         storeCard.innerHTML =
             "<div class='store-info'>Nenhuma empresa encontrada.</div>";
@@ -249,6 +541,8 @@ function renderStore() {
 
     storeCard.innerHTML =
         getStoreCardHTML(company);
+
+    renderReviews();
 }
 
 function getFilteredCompanies() {

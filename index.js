@@ -623,6 +623,181 @@ function seedDatabase() {
         }
     };
 
+    const companyMetadata = {
+        "contato@techstore.com": {
+            descricao: "Loja especializada em tecnologia, informática e equipamentos gamers.",
+            endereco: "Av. Afonso Pena, 2500 - Centro, Belo Horizonte/MG",
+            telefone: "(31) 3333-1111",
+            whatsapp: "5531999111111",
+            site: "https://www.techstore.com.br",
+            avaliacoes: {
+                "joao.silva@email.com": { comentario: "Excelente atendimento.", nota: 5 },
+                "maria.santos@email.com": { comentario: "Entrega rápida.", nota: 4 }
+            }
+        },
+        "vendas@ecohouse.com": {
+            descricao: "Móveis e decoração sustentável.",
+            endereco: "Rua dos Ipês, 120 - Savassi, Belo Horizonte/MG",
+            telefone: "(31) 3333-2222",
+            whatsapp: "5531999222222",
+            site: "https://www.ecohouse.com.br",
+            avaliacoes: {
+                "ana.costa@email.com": { comentario: "Produtos lindos.", nota: 5 },
+                "lucas.rocha@email.com": { comentario: "Boa qualidade.", nota: 4 }
+            }
+        },
+        "contato@gamerhub.com": {
+            descricao: "Periféricos e acessórios gamers.",
+            endereco: "Av. Brasil, 500 - Centro, Belo Horizonte/MG",
+            telefone: "(31) 3333-3333",
+            whatsapp: "5531999333333",
+            site: "https://www.gamerhub.com.br",
+            avaliacoes: {
+                "pedro.almeida@email.com": { comentario: "Mouse excelente.", nota: 5 },
+                "joao.silva@email.com": { comentario: "Bom custo-benefício.", nota: 4 }
+            }
+        },
+        "vendas@smartwear.com": {
+            descricao: "Moda inteligente e wearables.",
+            endereco: "Rua da Bahia, 800 - Lourdes, Belo Horizonte/MG",
+            telefone: "(31) 3333-4444",
+            whatsapp: "5531999444444",
+            site: "https://www.smartwear.com.br",
+            avaliacoes: {
+                "maria.santos@email.com": { comentario: "Relógio muito bonito.", nota: 5 },
+                "ana.costa@email.com": { comentario: "Gostei bastante.", nota: 4 }
+            }
+        },
+        "contato@bookworld.com": {
+            descricao: "Livraria com títulos nacionais e internacionais.",
+            endereco: "Av. Augusto de Lima, 450 - Centro, Belo Horizonte/MG",
+            telefone: "(31) 3333-5555",
+            whatsapp: "5531999555555",
+            site: "https://www.bookworld.com.br",
+            avaliacoes: {
+                "lucas.rocha@email.com": { comentario: "Ótimos livros.", nota: 5 },
+                "joao.silva@email.com": { comentario: "Bom catálogo.", nota: 4 }
+            }
+        },
+        "contato@petcenter.com": {
+            descricao: "Produtos para cães e gatos.",
+            endereco: "Rua Pium-i, 300 - Anchieta, Belo Horizonte/MG",
+            telefone: "(31) 3333-6666",
+            whatsapp: "5531999666666",
+            site: "https://www.petcenter.com.br",
+            avaliacoes: {
+                "ana.costa@email.com": { comentario: "Meu pet adorou.", nota: 5 },
+                "pedro.almeida@email.com": { comentario: "Boa variedade.", nota: 4 }
+            }
+        },
+        "vendas@fitlife.com": {
+            descricao: "Suplementos e nutrição esportiva.",
+            endereco: "Av. do Contorno, 9000 - Gutierrez, Belo Horizonte/MG",
+            telefone: "(31) 3333-7777",
+            whatsapp: "5531999777777",
+            site: "https://www.fitlife.com.br",
+            avaliacoes: {
+                "lucas.rocha@email.com": { comentario: "Whey excelente.", nota: 5 },
+                "maria.santos@email.com": { comentario: "Preço justo.", nota: 4 }
+            }
+        },
+        "contato@mobdesign.com": {
+            descricao: "Móveis modernos para casa e escritório.",
+            endereco: "Rua Curitiba, 2200 - Lourdes, Belo Horizonte/MG",
+            telefone: "(31) 3333-8888",
+            whatsapp: "5531999888888",
+            site: "https://www.mobdesign.com.br",
+            avaliacoes: {
+                "joao.silva@email.com": { comentario: "Sofá muito confortável.", nota: 5 },
+                "ana.costa@email.com": { comentario: "Acabamento ótimo.", nota: 4 }
+            }
+        },
+        "vendas@beautystore.com": {
+            descricao: "Cosméticos e cuidados pessoais.",
+            endereco: "Rua Alagoas, 850 - Funcionários, Belo Horizonte/MG",
+            telefone: "(31) 3333-9999",
+            whatsapp: "5531999999999",
+            site: "https://www.beautystore.com.br",
+            avaliacoes: {
+                "maria.santos@email.com": { comentario: "Produtos excelentes.", nota: 5 },
+                "ana.costa@email.com": { comentario: "Recomendo.", nota: 5 }
+            }
+        },
+        "contato@autoparts.com": {
+            descricao: "Peças e acessórios automotivos.",
+            endereco: "Av. Amazonas, 4500 - Nova Suíça, Belo Horizonte/MG",
+            telefone: "(31) 3333-1010",
+            whatsapp: "5531999101010",
+            site: "https://www.autoparts.com.br",
+            avaliacoes: {
+                "pedro.almeida@email.com": { comentario: "Óleo de qualidade.", nota: 4 },
+                "lucas.rocha@email.com": { comentario: "Atendimento rápido.", nota: 5 }
+            }
+        },
+        "contato@pizzamaster.com": {
+            descricao: "Pizzaria artesanal tradicional.",
+            endereco: "Rua dos Timbiras, 1200 - Centro, Belo Horizonte/MG",
+            telefone: "(31) 3333-2020",
+            whatsapp: "5531999202020",
+            site: "https://www.pizzamaster.com.br",
+            avaliacoes: {
+                "joao.silva@email.com": { comentario: "Melhor pizza da cidade.", nota: 5 },
+                "maria.santos@email.com": { comentario: "Muito saborosa.", nota: 5 }
+            }
+        },
+        "contato@padariacentral.com": {
+            descricao: "Padaria artesanal com produção diária.",
+            endereco: "Rua Espírito Santo, 450 - Centro, Belo Horizonte/MG",
+            telefone: "(31) 3333-3030",
+            whatsapp: "5531999303030",
+            site: "https://www.padariacentral.com.br",
+            avaliacoes: {
+                "ana.costa@email.com": { comentario: "Pães sempre frescos.", nota: 5 },
+                "pedro.almeida@email.com": { comentario: "Bolos deliciosos.", nota: 4 }
+            }
+        },
+        "contato@mercadobrasil.com": {
+            descricao: "Mercado completo para compras do dia a dia.",
+            endereco: "Av. Teresa Cristina, 800 - Prado, Belo Horizonte/MG",
+            telefone: "(31) 3333-4040",
+            whatsapp: "5531999404040",
+            site: "https://www.mercadobrasil.com.br",
+            avaliacoes: {
+                "lucas.rocha@email.com": { comentario: "Grande variedade.", nota: 5 },
+                "joao.silva@email.com": { comentario: "Bons preços.", nota: 4 }
+            }
+        },
+        "contato@salonlux.com": {
+            descricao: "Salão de beleza premium.",
+            endereco: "Rua Sergipe, 980 - Savassi, Belo Horizonte/MG",
+            telefone: "(31) 3333-5050",
+            whatsapp: "5531999505050",
+            site: "https://www.salonlux.com.br",
+            avaliacoes: {
+                "maria.santos@email.com": { comentario: "Serviço impecável.", nota: 5 },
+                "ana.costa@email.com": { comentario: "Equipe excelente.", nota: 5 }
+            }
+        },
+        "contato@modaurbana.com": {
+            descricao: "Moda casual e urbana.",
+            endereco: "Av. Getúlio Vargas, 1400 - Savassi, Belo Horizonte/MG",
+            telefone: "(31) 3333-6060",
+            whatsapp: "5531999606060",
+            site: "https://www.modaurbana.com.br",
+            avaliacoes: {
+                "pedro.almeida@email.com": { comentario: "Roupas modernas.", nota: 4 },
+                "lucas.rocha@email.com": { comentario: "Ótimo atendimento.", nota: 5 }
+            }
+        }
+    };
+
+    Object.entries(companyMetadata).forEach(([email, metadata]) => {
+        companies[email] = {
+            ...companies[email],
+            ...metadata
+        };
+    });
+
     const promotions = {
         "contato@techstore.com": companies["contato@techstore.com"].products,
         "contato@gamerhub.com": companies["contato@gamerhub.com"].products,
@@ -638,6 +813,20 @@ function seedDatabase() {
         "contato@salonlux.com": companies["contato@salonlux.com"].products,
         "contato@modaurbana.com": companies["contato@modaurbana.com"].products
     };
+
+    const favorites = {
+        "contato@techstore.com": companies["contato@techstore.com"].products,
+        "contato@gamerhub.com": companies["contato@gamerhub.com"].products,
+        "vendas@smartwear.com": companies["vendas@smartwear.com"].products,
+        "contato@bookworld.com": companies["contato@bookworld.com"].products,
+        "contato@petcenter.com": companies["contato@petcenter.com"].products,
+        "vendas@fitlife.com": companies["vendas@fitlife.com"].products,
+    };
+
+    localStorage.setItem(
+        "favorites",
+        JSON.stringify(favorites)
+    );
 
     localStorage.setItem(
         "promotions",

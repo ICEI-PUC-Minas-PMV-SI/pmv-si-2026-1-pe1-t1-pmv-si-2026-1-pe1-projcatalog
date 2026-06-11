@@ -47,9 +47,9 @@
 
                 <input class="search-input" type="text" placeholder="Buscar por nome ou produto..." />
 
-                <button class="search-btn">
-                    BUSCAR
-                </button>
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
 
             </div>
 
@@ -141,53 +141,22 @@
 
                     <small>AVALIAÇÕES</small>
 
-                    <div class="review-score">
-                        4.0 ★★★★★
+                    <div id="reviewScore" class="review-score">
+                        0.0 ★★★★★
                     </div>
 
-                    <div class="bar">
-                        <div class="bar-fill" style="width:90%"></div>
-                    </div>
-
-                    <div class="bar">
-                        <div class="bar-fill" style="width:70%"></div>
-                    </div>
-
-                    <div class="bar">
-                        <div class="bar-fill" style="width:50%"></div>
-                    </div>
-
-                    <div class="bar">
-                        <div class="bar-fill" style="width:30%"></div>
-                    </div>
-
-                    <div class="bar">
-                        <div class="bar-fill" style="width:15%"></div>
-                    </div>
+                    <div id="reviewsBars"></div>
 
                 </div>
 
-                <button class="review-btn">
+                <button id="reviewBtn" class="review-btn">
                     <i class="fa-regular fa-comment"></i>
                     Escrever Avaliação
                 </button>
 
-                <div class="review-item">
-                    <strong>João Silva ★★★★★</strong>
-                    Atendimento excelente e ambiente agradável.
-                </div>
+                <div id="reviewsContainer"></div>
 
-                <div class="review-item">
-                    <strong>Maria Santos ★★★★☆</strong>
-                    Muito bom, recomendo!
-                </div>
-
-                <div class="review-item">
-                    <strong>Pedro Costa ★★★★★</strong>
-                    Ótimo local, voltarei com certeza.
-                </div>
-
-                <button class="load-btn">
+                <button id="loadMoreBtn" class="load-btn" style="display:none">
                     Carregar Mais Avaliações
                 </button>
 
@@ -245,6 +214,40 @@
         </div>
 
     </footer>
+
+    <div class="review-modal" id="reviewModal">
+
+        <div class="review-modal-content">
+
+            <h3>Nova Avaliação</h3>
+
+            <select id="reviewNote">
+
+                <option value="5">5 estrelas</option>
+                <option value="4">4 estrelas</option>
+                <option value="3">3 estrelas</option>
+                <option value="2">2 estrelas</option>
+                <option value="1">1 estrela</option>
+
+            </select>
+
+            <textarea id="reviewComment" placeholder="Escreva sua avaliação..."></textarea>
+
+            <div class="review-actions">
+
+                <button id="cancelReview">
+                    Cancelar
+                </button>
+
+                <button id="saveReview">
+                    Salvar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
 
     <script type="module" src="catalog.js"></script>
     <script type="module" src="../../../scripts/header.js"></script>
