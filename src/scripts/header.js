@@ -1,4 +1,4 @@
-import { updateActiveMenu, navigate } from "./common.js"
+import { updateActiveMenu, navigate, BASE_URL } from "./common.js"
 
 const menuLinks = document.querySelectorAll(".menu a");
 const userContainer = document.querySelector(".user-container");
@@ -42,7 +42,7 @@ function fillLoggedUserName() {
 userContainer?.addEventListener("click", () => {
     localStorage.setItem("loggedUser", JSON.stringify(undefined));
 
-    window.location.href = "/index.html";
+    window.location.href = `${BASE_URL()}/`;
 });
 
 fillLoggedUserName();
