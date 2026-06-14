@@ -44,7 +44,7 @@ function validateForm() {
         }
 
         // Validação específica por tipo
-        if (input.name === "email") {
+        if (input.name === "e-mail") {
             const emailRegex =
                 /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -931,36 +931,44 @@ empresaBtn.addEventListener("click", () => {
 authForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const data = getFormData()
-    let loginAllowed = false
+    const data = getFormData();
+    let loginAllowed = false;
 
     if (!isLogin) {
-        if (isEmpresa) {
-            addCompany(data)
+        try {
+            if (isEmpresa) {
+                addCompany(data);
+            } else {
+                addClient(data);
+            }
+            loginAllowed = true;
+        } catch (error) {
+            alert(error.message); 
+            return;
         }
-        else {
-            addClient(data)
-        }
-
-        loginAllowed = true
     }
 
     if (isLogin || loginAllowed) {
         if (isEmpresa) {
-            const companyData = getCompanyByEmail(data.email)
+            const companyData = getCompanyByEmail(data.email);
 
-            if (data.senha === companyData.senha) {
-                setLoggedCompany(companyData)
-                loginAllowed = true
+            if (companyData && data.senha === companyData.senha) {
+                setLoggedCompany(companyData);
+                loginAllowed = true;
+            } else {
+                alert("E-mail ou senha de Empresa incorretos!");
+                loginAllowed = false;
             }
-        }
+        } 
         else {
-            const clientData = getClientByEmail(data.email)
+            const clientData = getClientByEmail(data.email);
 
-            console.log(clientData, data)
-            if (data.senha === clientData.senha) {
-                setLoggedClient(clientData)
-                loginAllowed = true
+            if (clientData && data.senha === clientData.senha) {
+                setLoggedClient(clientData);
+                loginAllowed = true;
+            } else {
+                alert("E-mail ou senha de Cliente incorretos!");
+                loginAllowed = false;
             }
         }
     }
@@ -968,15 +976,12 @@ authForm.addEventListener("submit", (event) => {
     if (loginAllowed) {
         if (isEmpresa) {
             window.location.href =
-                `${BASE_URL()}/src/pages/bussines/dashboard/dashboard.html`
-        }
-        else {
+                `${BASE_URL()}/src/pages/bussines/dashboard/dashboard.html`;
+        } else {
             window.location.href =
-                `${BASE_URL()}/src/pages/client/catalog/catalog.html`
+                `${BASE_URL()}/src/pages/client/catalog/catalog.html`;
         }
     }
-
 });
-
 seedDatabase();
 renderForm();
