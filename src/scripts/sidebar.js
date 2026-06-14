@@ -13,3 +13,17 @@ menuButtons.forEach(link => {
 
     updateActiveMenu(menuButtons, menu)
 });
+
+const btnSair = document.getElementById("log-out");
+
+
+if (btnSair) {
+    btnSair.addEventListener("click", () => {
+        
+ 
+        localStorage.removeItem("loggedCompany");
+        localStorage.removeItem("loggedUser"); 
+
+        window.location.href = "../../../../index.html"; 
+    });
+}
