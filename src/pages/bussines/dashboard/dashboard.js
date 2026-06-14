@@ -17,6 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const company = allCompanies[emailEmpresaLogada] || loggedInfo.data;
 
+    const subtitulo = document.querySelector(".content-header p");
+
+    if (subtitulo && company.razaoSocial) {
+        subtitulo.textContent = company.razaoSocial.toUpperCase();
+    }
+
     const produtosAtivos = company.products ? company.products.length : 0;
     const visitasMes = company.visitasMes || 0; 
     const cliquesContato = company.cliquesContato || 0; 
@@ -89,6 +95,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         actionButtons[1].addEventListener('click', () => {
             window.location.href = "../products/products.html";
+        });
+    }
+
+    const logoutButton = document.getElementById("log-out");
+
+    if (logoutButton) {
+        logoutButton.addEventListener("click", () => {
+            localStorage.removeItem("loggedCompany");
+            window.location.href = "../../../../index.html";
         });
     }
 });
