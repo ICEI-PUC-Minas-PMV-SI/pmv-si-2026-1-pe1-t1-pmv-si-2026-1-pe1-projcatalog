@@ -154,6 +154,14 @@
     gap: 1rem;
 }
 
+.empty-state {
+    text-align: center;
+    color: #5f6d82;
+    font-size: .95rem;
+    padding: 2rem;
+    border: 1px dashed #d6dce5;
+}
+
 .product-card {
     background: #f7f8fa;
     border: 1px solid #d6dce5;

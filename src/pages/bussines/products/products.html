@@ -70,6 +70,9 @@
 
                 <form class="product-form">
 
+                    <!-- Campo escondido: guarda o id do produto quando estamos editando -->
+                    <input type="hidden" id="product-id" value="" />
+
                     <div class="form-top">
 
                         <h3>
@@ -126,85 +129,8 @@
             </div>
 
             <!-- LISTA -->
-            <div class="products-list">
-
-                <!-- CARD -->
-                <div class="product-card">
-
-                    <div class="product-info">
-
-                        <div class="product-title">
-
-                            <h3 class="card-title">
-                                PRODUTO TESTE 1
-                            </h3>
-
-                            <span class="price-badge card-price">
-                                R$ 50,00
-                            </span>
-
-                        </div>
-
-                        <p class="card-description">
-                            Uma breve descrição do produto.
-                        </p>
-
-                    </div>
-
-                    <div class="product-actions">
-
-                        <button class="edit-btn">
-                            <i class="fa-regular fa-pen-to-square"></i>
-                            EDITAR
-                        </button>
-
-                        <button class="delete-btn">
-                            <i class="fa-regular fa-trash-can"></i>
-                            EXCLUIR
-                        </button>
-
-                    </div>
-
-                </div>
-
-                <!-- CARD -->
-                <div class="product-card">
-
-                    <div class="product-info">
-
-                        <div class="product-title">
-
-                            <h3 class="card-title">
-                                SERVIÇO TESTE 2
-                            </h3>
-
-                            <span class="price-badge card-price">
-                                R$ 100,00
-                            </span>
-
-                        </div>
-
-                        <p class="card-description">
-                            Consultoria de 1 hora.
-                        </p>
-
-                    </div>
-
-                    <div class="product-actions">
-
-                        <button class="edit-btn">
-                            <i class="fa-regular fa-pen-to-square"></i>
-                            EDITAR
-                        </button>
-
-                        <button class="delete-btn">
-                            <i class="fa-regular fa-trash-can"></i>
-                            EXCLUIR
-                        </button>
-
-                    </div>
-
-                </div>
+            <!-- Os cards de produto são criados pelo JavaScript (products.js) -->
+            <div class="products-list" id="products-list">
 
             </div>
 
