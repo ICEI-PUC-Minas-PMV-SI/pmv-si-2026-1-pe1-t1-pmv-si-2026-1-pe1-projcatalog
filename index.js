@@ -11,7 +11,7 @@ const empresaBtn = document.getElementById("empresaBtn");
 let isLogin = true;
 let isEmpresa = false;
 
-function createInput(label, placeholder, icon, type = "text") {
+function createInput(label, placeholder, icon, type = "text", name = label.toLowerCase()) {
     return `
         <div class="form-group">
           <label>${label}</label>
@@ -21,6 +21,7 @@ function createInput(label, placeholder, icon, type = "text") {
 
             <input
               type="${type}"
+              name="${name}" 
               placeholder="${placeholder}"
             />
           </div>
@@ -83,25 +84,18 @@ function bindValidationEvents() {
 function renderForm() {
     authForm.innerHTML = "";
 
-    if (isLogin) {
+if (isLogin) {
 
         cardSubtitle.innerText = isEmpresa
             ? "PARA EMPRESAS"
             : "ACESSO À CONTA";
 
-        if (isEmpresa) {
-            authForm.innerHTML += createInput(
-                "CNPJ",
-                "CNPJ",
-                "fa-regular fa-id-card"
-            );
-        } else {
-            authForm.innerHTML += createInput(
-                "E-MAIL",
-                "email@exemplo.com",
-                "fa-regular fa-envelope"
-            );
-        }
+
+        authForm.innerHTML += createInput(
+            "E-MAIL",
+            "email@exemplo.com",
+            "fa-regular fa-envelope"
+        );
 
         authForm.innerHTML += createInput(
             "SENHA",
@@ -111,7 +105,7 @@ function renderForm() {
         );
 
         authForm.innerHTML += `
-          <button  type="submit" class="submit-btn" id="login-btn">
+          <button type="submit" class="submit-btn" id="login-btn">
             ENTRAR
           </button>
         `;
