@@ -190,6 +190,7 @@ function addCompany({
     cnpj,
     email,
     senha,
+    categoria,
     image
 }) {
     const companies =
@@ -204,6 +205,7 @@ function addCompany({
         cnpj,
         email,
         senha,
+        categoria,
         image,
         products: []
     };
@@ -858,7 +860,9 @@ function getFormData() {
             razaoSocial: values["RAZÃO SOCIAL"],
             cnpj: values["CNPJ"],
             email: values["E-MAIL"],
-            senha: values["SENHA"]
+            senha: values["SENHA"],
+            categoria: "SERVIÇOS",
+            image: "https://images.unsplash.com/photo-1556740749-887f6717d7e4"
         };
     }
 
