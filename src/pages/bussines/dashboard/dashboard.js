@@ -1,21 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
     
+    // Pega quem está logado
     const loggedInfo = JSON.parse(localStorage.getItem("loggedCompany"));
 
-    // Se não houver empresa logada, redireciona para a página inicial (login)
+    // Se não houver empresa logada, redireciona para a página inicial
     if (!loggedInfo || loggedInfo.type !== "company") {
         alert("Acesso negado. Faça login como empresa.");
-        // Ajuste o caminho abaixo conforme a estrutura de pastas do seu projeto
         window.location.href = "../../../../index.html"; 
         return;
     }
 
-    const company = loggedInfo.data;
 
+    const emailEmpresaLogada = loggedInfo.data.email;
+    const allCompanies = JSON.parse(localStorage.getItem("companies")) || {};
+    
+
+    const company = allCompanies[emailEmpresaLogada] || loggedInfo.data;
 
     const produtosAtivos = company.products ? company.products.length : 0;
+    const visitasMes = company.visitasMes || 0; 
+    const cliquesContato = company.cliquesContato || 0; 
 
-
+    // Cálculo da média
     let somaNotas = 0;
     let totalAvaliacoes = 0;
     
@@ -27,11 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     const avaliacaoMedia = totalAvaliacoes > 0 ? (somaNotas / totalAvaliacoes).toFixed(1) : 0;
 
-
-    const visitasMes = company.visitasMes || Math.floor(Math.random() * 300) + 50;
-    const cliquesContato = company.cliquesContato || Math.floor(Math.random() * 80) + 10;
-
-
     const statElements = document.querySelectorAll('.stat-card h2');
 
     if (statElements.length >= 4) {
@@ -41,14 +42,12 @@ document.addEventListener("DOMContentLoaded", () => {
         statElements[3].setAttribute('data-target', produtosAtivos);
     }
 
-
     const counters = document.querySelectorAll("[data-target]");
 
     counters.forEach(counter => {
         const target = parseFloat(counter.getAttribute("data-target"));
         let current = 0;
         
-
         const increment = target > 0 ? target / 40 : 0;
 
         const updateCounter = () => {
@@ -59,7 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             current += increment;
 
-
             if (current >= target) {
                 if (target % 1 !== 0) {
                     counter.innerText = target.toFixed(1);
@@ -68,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
                 return;
             }
-
 
             if (target % 1 !== 0) {
                 counter.innerText = current.toFixed(1);
@@ -82,20 +79,15 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCounter();
     });
 
-    
+    // Botões do Painel
     const actionButtons = document.querySelectorAll('.action-card button');
 
     if (actionButtons.length >= 2) {
-        
-       
         actionButtons[0].addEventListener('click', () => {
-           
            window.location.href = "../profile/profile.html";
         });
 
-        // Botão: GERENCIAR CATÁLOGO
         actionButtons[1].addEventListener('click', () => {
-             // Altere o link abaixo para o local correto do seu arquivo HTML de Produtos
             window.location.href = "../products/products.html";
         });
     }

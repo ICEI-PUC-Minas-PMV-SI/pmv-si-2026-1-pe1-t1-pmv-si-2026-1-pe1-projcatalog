@@ -40,6 +40,21 @@ const whatsappBtn =
 const callBtn =
     document.getElementById("callBtn");
 
+
+
+// FUNÇÃO CONTADOR DE CLIQUES
+
+function registrarCliqueContato(emailEmpresa) {
+    const companies = JSON.parse(localStorage.getItem("companies")) || {};
+    
+    if (companies[emailEmpresa]) {
+        companies[emailEmpresa].cliquesContato = (companies[emailEmpresa].cliquesContato || 0) + 1;
+        localStorage.setItem("companies", JSON.stringify(companies));
+    }
+}
+
+
+
 function getFavorites() {
 
     return JSON.parse(
@@ -160,6 +175,9 @@ function renderCompany() {
                 .replace(/\D/g, "");
 
         whatsappBtn.onclick = () => {
+            
+            // Registra o clique no banco 
+            registrarCliqueContato(company.email); 
 
             window.open(
                 `https://wa.me/55${phone}`,
@@ -168,6 +186,9 @@ function renderCompany() {
         };
 
         callBtn.onclick = () => {
+
+            // Registra o clique no banco 
+            registrarCliqueContato(company.email); 
 
             window.location.href =
                 `tel:${phone}`;
