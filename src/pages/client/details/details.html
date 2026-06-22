@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Detalhes</title>
+
+  <link rel="stylesheet" href="../../../styles/styles.css" />
+  <link rel="stylesheet" href="details.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo-container">
+      <div class="logo">CATALOG<span>.</span></div>
+    </div>
+
+    <div class="link-container">
+      <nav class="menu">
+        <a href="#" class="active">Início</a>
+        <a href="#">Favoritos</a>
+      </nav>
+    </div>
+
+    <div class="user-container">
+      <span id="logged-user-name"></span>
+      <i class="fa-solid fa-right-from-bracket"></i>
+    </div>
+  </header>
+
+  <main class="details-container">
+
+    <section class="hero">
+
+      <div class="hero-banner">
+        <img id="bannerImage" src="" alt="Banner da empresa" />
+      </div>
+
+      <div class="business-card">
+
+        <div class="business-left">
+
+          <div class="business-logo">
+            <img id="companyLogo" src="" alt="Logo" />
+          </div>
+
+          <div class="business-info">
+
+            <div class="business-title">
+
+              <h1 id="companyName">
+                Empresa
+              </h1>
+
+              <div class="business-tags">
+
+                <span id="companyCategory">
+                  Categoria
+                </span>
+
+                <span>
+                  ⭐ Empresa Parceira
+                </span>
+
+              </div>
+
+            </div>
+
+            <p id="companyDescription">
+              Descrição da empresa.
+            </p>
+
+            <div class="business-meta">
+
+              <div>
+                <i class="fa-solid fa-location-dot"></i>
+
+                <span id="companyAddress">
+                  Não informado
+                </span>
+              </div>
+
+              <div>
+                <i class="fa-solid fa-phone"></i>
+
+                <span id="companyPhone">
+                  Não informado
+                </span>
+              </div>
+
+              <div>
+                <i class="fa-solid fa-globe"></i>
+
+                <span id="companyWebsite">
+                  Não informado
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="business-actions">
+
+          <button class="whatsapp-btn" id="whatsappBtn">
+            <i class="fa-brands fa-whatsapp"></i>
+            WHATSAPP
+          </button>
+
+          <button class="call-btn" id="callBtn">
+            <i class="fa-solid fa-phone"></i>
+            LIGAR
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="products-section">
+
+      <div class="section-title">
+        <h2>PRODUTOS & SERVIÇOS</h2>
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+
+    <div class="footer-grid">
+
+      <div>
+        <h2>CATALOG</h2>
+
+        <p>
+          Conectando você aos melhores negócios locais.
+        </p>
+      </div>
+
+      <div>
+        <h4>Explorar</h4>
+
+        <ul>
+          <li>Todas as categorias</li>
+          <li>Buscar</li>
+          <li>Favoritos</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Para Empresas</h4>
+
+        <ul>
+          <li>Cadastrar negócio</li>
+          <li>Painel</li>
+          <li>Suporte</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Sobre</h4>
+
+        <ul>
+          <li>Quem somos</li>
+          <li>Contato</li>
+          <li>Termos de uso</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-copy">
+      © 2026 CATALOG. Todos os direitos reservados.
+    </div>
+
+  </footer>
+
+  <script type="module" src="details.js"></script>
+  <script type="module" src="../../../scripts/header.js"></script>
+
+</body>
+
+</html>

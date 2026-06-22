@@ -1,0 +1,29 @@
+import { updateActiveMenu, navigate } from "./common.js"
+
+const menuButtons = document.querySelectorAll(".menu-item");
+
+const menu = {
+    "Minha Loja": "src/pages/bussines/profile/profile.html",
+    "Dashboard": "src/pages/bussines/dashboard/dashboard.html",
+    "Produtos/Serviços": "src/pages/bussines/products/products.html"
+}
+
+menuButtons.forEach(link => {
+    link.addEventListener("click", navigate(link.querySelector('p').textContent, menu));
+
+    updateActiveMenu(menuButtons, menu)
+});
+
+const btnSair = document.getElementById("log-out");
+
+
+if (btnSair) {
+    btnSair.addEventListener("click", () => {
+        
+ 
+        localStorage.removeItem("loggedCompany");
+        localStorage.removeItem("loggedUser"); 
+
+        window.location.href = "../../../../index.html"; 
+    });
+}
